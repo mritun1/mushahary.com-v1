@@ -1,0 +1,190 @@
+
+
+@mixin inputClass($pad, $radius) {
+    padding: $pad;
+    outline: none;
+    border-radius: $radius;
+    border: none;
+}
+@mixin buttonClass($mar,$pad,$radius,$color,$bgColor,$bgHoverColor,$fontSize){
+    margin: $mar;
+    cursor: pointer;
+    border: none;
+    border-radius: $radius;
+    padding: $pad;
+    color: $color;
+    font-size: $fontSize;
+    background-color: $bgColor;
+    &:hover {
+        background-color: $bgHoverColor;
+    }
+}
+.login_bg{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login_box{
+        background-color: rgb(199, 179, 179);
+        padding:6px;
+        border-radius: 6px;
+        box-shadow: 0px 0px 6px 1px rgb(214, 173, 173);
+        h1{
+            text-align: center;
+        }
+        td{
+            padding: 8px;
+            input{
+                @include inputClass(6px, 6px);
+            }
+            input[type=submit]{
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+        .submitbtn {
+            text-align: right;
+        }
+    }
+}
+@mixin stickyAdmin($val){
+    position: sticky;
+    top: $val;
+}
+.adminHead{
+    background-color: white;
+    @include stickyAdmin(0px);
+    height: 60px;
+    text-align: center;
+}
+.adminBody{
+    display: flex;
+    height: 200vh;
+    .adminSidebar{
+        width:190px;
+        .adminSideCont{
+            @include stickyAdmin(60px);
+            ul{
+                list-style: none;
+                a{
+                    color: teal;
+                    font-weight: bold;
+                }
+                li{
+                    position: relative;
+                    line-height: 32px;
+                    i{
+                        position: absolute;
+                        left: -20px;
+                        top:8px;
+                    }
+                }
+            }
+        }
+    }
+    .adminContent{
+        width:100%;
+        background-color: rgb(226, 231, 235);
+        padding: 6px;
+        .contTitle{
+            background-color: rgb(180, 175, 175);
+            padding: 6px;
+            border-radius: 6px;
+            h2{
+                margin:6px;
+                color:rgb(224, 215, 215);
+                button{
+                    //@mixin buttonClass($mar, $pad, $radius, $color, $bgColor, $bgHoverColor, $fontSize)
+                    @include buttonClass(0px, 6px, 6px,  white, rgb(69, 112, 61), rgb(94, 138, 86), 20px);
+                    margin-left:8px;
+                    margin-top:0;
+                    float:right;
+                }
+            }
+        }
+        .contTable{
+            margin-top: 6px;
+            border-radius: 6px;
+            padding: 6px;
+            table{
+                width: 100%;
+                td:first-child{
+                    width: 30px;
+                    text-align: center;
+                }
+                tbody{
+                    td:last-child {
+                        h3{
+                            margin: 6px;
+                        }                        
+                        button {
+                            //@include buttonClass($mar, $pad, $radius, $color, $bgColor, $bgHoverColor, $fontSize)
+                            @include buttonClass(3px, 6px, 6px, rgb(199, 186, 186), '', '', '');
+                        }
+                        a:nth-child(2) >button {
+                            background-color: rgb(20, 124, 165);
+                            &:hover {
+                                background-color: rgb(88, 164, 194);
+                            }
+                        }
+                        a:nth-child(3) >button {
+                            background-color: rgb(209, 97, 32);
+
+                            &:hover {
+                                background-color: rgb(218, 153, 116);
+                            }
+                        }
+                        button:nth-child(4) {
+                            background-color: rgb(165, 20, 20);
+
+                            &:hover {
+                                background-color: rgb(185, 93, 93);
+                            }
+                        }
+                    }
+                }
+            }
+            .editTable{
+                td{
+                    text-align: left !important;
+                    h2,h6 {
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                    input,
+                    textarea,
+                    select{
+                        width: 99%;
+                        @include inputClass(6px, 6px);
+                        font-size: 16px;
+                    }
+                    
+                }                
+            }
+            thead{font-weight: bold;}
+            table, tr, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+            }
+        }
+    }
+}
+
+.editor-toolbar-class{
+    
+}
+.editor-cont-class{
+    background-color: white !important;
+}
+.rt-submit{
+    float: right;
+    background-color: green;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px !important;
+    &:hover{
+        background-color: rgb(60, 148, 60);
+    }
+}

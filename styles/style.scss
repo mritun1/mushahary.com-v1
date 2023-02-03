@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+html{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding:0px;
+    margin:0px;
+}
+a {
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+@mixin pad_mar() {
+    padding: 5px;
+    margin: 5px;
+}
+.container {
+    width: 100%;
+    @media only screen and (min-width:999px) {
+        width: 80%;
+    }
+    margin: 0px auto;
+    padding: 5px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.leftMenu{
+    height: 70px;
+    flex: 2;
+    .logo{
+        display: flex;
+        width: 210px;
+        .logo_left{
+            display: flex;
+                align-items: center;
+            .logo_pic{
+                background-color: red;
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                background-image: url("/../imgs/icons/profile.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        .logo_right{
+            padding-left: 8px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.rightMenu{
+    height: 70px;
+    flex:2;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    ul{
+        list-style-type: none;
+        li{
+            display: inline;
+            padding: 6px;
+            a{
+                text-decoration: none;
+                color:#173D89;
+                font-weight: bold;
+                &:hover{
+                    text-decoration: underline;
+                }
+                i{
+                    margin-right:5px;
+                }
+            }
+            position: relative;
+            .dropdown{
+                border: 1px solid rgb(184, 181, 181);
+                background-color: white;
+                border-radius: 6px;
+                width: 180px;
+                position: absolute;
+                left:0;
+                display: none;
+                padding: 6px;
+                p{
+                    margin-top: 3px;
+                    margin-bottom: 3px;
+                    a {
+                        font-weight: 500;
+                    }
+                }
+            }
+            &:hover{
+                .dropdown{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@mixin tbl {
+    text-align: right;
+    padding-right: 6px;
+    color: #5E5B5B;
+}
+@mixin tb_cen() {
+    padding: 6px;
+    margin-top: 5px;
+    background: #F0EEEE;
+    border-radius: 6px;
+    table>tbody>tr>td:first-child {
+        // text-align: right;
+        // padding-right: 6px;
+        // color: #5E5B5B;
+        @include tbl();
+    }
+}
+.content{
+    margin-top:18px;
+    padding: 5px;
+    //padding-top:0px;
+    background-color: rgb(221, 225, 226);
+    border-radius: 0 0 8px 8px;
+    .content_middle{
+        border-radius: 6px;
+        background-color: white;
+        width: 100%;
+        @media only screen and (min-width:999px) {
+            width: 80%;
+        }
+        margin:0px auto;
+        .c_title{
+            text-align: center;
+            border-bottom: 2px solid #785D5D;
+            border-top: 2px solid #785D5D;
+            margin-top:6px;
+            margin-bottom: 6px;
+            h2{
+                margin: 3px;
+            }
+        }
+        .c_profile{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 18px;
+            .profile_left{
+                flex:2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .profile_pic{
+                    margin: 3px;
+                    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
+                    border-radius: 8px;
+                    width:200px;
+                    height: 200px;
+                    background-size: cover;
+                    background-position: center;
+                    background-image: url('../public/imgs/icons/profile.jpg');
+                }
+            }
+            .profile_right{
+                padding:5px;
+                padding-left: 12px;
+                flex:8;
+                .profile_name{
+                    h2{
+                        margin:0px;
+                        color: #000000;
+                        text-shadow: 0px 8px 9px rgba(0, 0, 0, 0.25);
+                    }
+                }
+                .profile_des{
+                    // padding: 6px;
+                    // margin-top:5px;
+                    // background: #F0EEEE;
+                    // border-radius: 6px;
+                    // table > tbody> tr > td:first-child{
+                    //     // text-align: right;
+                    //     // padding-right: 6px;
+                    //     // color: #5E5B5B;
+                    //     @include tb_cen();
+                    // }
+                    @include tb_cen();
+                    .company_links{
+                        color: #3D43D7;
+                        font-weight: bold;
+                        margin-left:9px;
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin resume_p {
+    margin: 0px;
+    color: #5E5B5B;
+}
+.resume{
+    background: #F0EEEE;
+    border-radius: 6px;
+    padding:6px;
+    margin-top:12px;
+    .resume_heading{
+        @include pad_mar();
+        background: #E3E2E2;
+        border-radius: 6px;
+        h3{
+            margin:0px;
+            font-weight: 500;
+            a {
+                margin-left: 9px;
+                font-size: 12px;
+                color: #0F518E;
+                font-weight: bold;
+            }
+        }
+    }
+    .resume_content{
+        @include pad_mar();
+        overflow: auto;
+        .stars{
+            color: #939F0B;
+        }
+        .stars > i{
+            margin:5px;
+            &:hover{
+                color: #c6d150;
+            }
+        }
+        table > tbody > tr > td:nth-child(2){
+            width:150px;
+        }
+        table > tbody> tr > td:first-child{
+            text-align: right;
+            color: #5E5B5B;
+            width:170px;
+        }
+        table > tbody> tr:last-child{
+            td:last-child{
+                padding: 12px;
+            }
+        }
+        table > tbody > tr:nth-last-child(2){
+            td:last-child{
+                padding: 12px;
+            }
+        }
+        table{
+            width:100%;
+            .tags{
+                color: rgb(206, 226, 226);
+                margin:4px;
+                padding:4px;
+                border-radius: 6px;
+                background-color: rgb(160, 54, 12);
+                font-weight: bold;
+                line-height: 32px;
+                font-size: 12px;
+            }
+            .lib{
+                margin:5px;
+                font-size: 12px;
+                span:first-child{
+                    background-color: rgb(124, 108, 16);
+                    color: rgb(233, 233, 218);
+                    padding:1px 4px;
+                    border-radius: 6px 0 0 6px;
+                }
+                span:last-child{
+                    background-color: rgb(21, 67, 153);
+                    color: rgb(218, 225, 233);
+                    padding: 1px 4px;
+                    border-radius: 0 6px 6px 0;
+                }
+            }
+        }
+    }
+    .resume_projects{
+        @include pad_mar();
+        p{
+            @include resume_p();
+        }
+        .project{
+            margin-top: 9px;
+            .project_head{
+                display: flex;
+                .project_head_text{
+                    background-color: #E4D6D6;
+                    padding: 5px;
+                    border-radius: 6px 6px 0 0;
+                    h4{
+                        margin:0px;
+                        color:#64131D;
+                        a{
+                            font-size: 14px;
+                            margin-left: 6px;
+                            color:#1377A2;
+                        }
+                    }
+                }
+            }
+            .project_content{
+                .title{
+                    font-size: 15px;
+                    margin-top: 9px;
+                }
+                .ol{
+                    margin-top: 0px;
+                    padding-left: 0px;
+                    margin-left:22px;
+                }
+                border-radius:0 6px 6px 6px;
+                background-color: #E4D6D6;
+                padding:5px
+                
+            }
+        }
+    }
+    .resume_profiles{
+        @include pad_mar();
+        overflow: auto;
+        .social{
+            background: #CEDAEC;
+            border-radius: 9px;
+            padding:9px;
+            margin:6px;
+            float: left;
+            font-size: 12px;
+            overflow: auto;
+            &:hover{
+                background: #9db1cf;
+            }
+            img{
+                float: left;
+                margin-right: 6px;
+            }
+            a{
+                color: #0F518E;
+                font-weight: bold;
+                float: left;
+                &:hover{
+                    color: #e8ecf3;
+                }
+            }
+        }
+    }
+    .resume_address {
+        @include pad_mar();
+        table>tbody>tr>td:first-child {
+            text-align: right;
+            color: #5E5B5B;
+        }
+    }
+}
+.footer{
+    padding: 8px;
+    .logo{
+        .logo_pic{
+            background-color: green;
+            width:80px;
+            height: 80px;
+            margin:0px auto;
+            border-radius: 50%;
+            background-image: url("/../imgs/icons/profile.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    .foot{
+        text-align: center;
+        a{
+            padding:6px;
+            color: #145A70;
+        }
+    }
+}
+.about,
+.contentPage{
+    width: 60%;
+    margin:0px auto;
+    padding: 5px;
+    @media only screen and (max-width:764px) {
+        width: 100%;
+    }
+    margin-bottom: 64px;
+}
+.resume_tools{
+    @include pad_mar();
+    p{
+        @include resume_p();
+    }
+    .resume_tools_link{
+        @include pad_mar();
+        a{
+            background-color: rgb(78, 130, 173);
+            color: rgb(215, 222, 228);
+            @include pad_mar();
+            border-radius: 9px;
+            font-size: 14px;
+            line-height: 32px;
+        }
+    }
+}
+.contact_table{
+    @include tb_cen();
+    table{
+        width: 100%;
+    }
+    table>tbody>tr>td:first-child {
+        @include tbl();
+        width:100px;
+    }
+    table>tbody>tr>td:nth-child(2){
+        input, textarea{
+            width:95%;
+            padding: 6px;
+            outline: none;
+            border: none;
+            margin-top:9px;
+            margin-bottom:9x;
+            font-size: 18px;
+        }
+    }
+    .email_btn{
+        background-color: green;
+        border:none;
+        padding:10px;
+        margin:10px;
+        border-radius: 6px;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        &:hover{
+            background-color: rgb(99, 163, 99);
+        }
+    }
+}
+.contentPage{
+    .article_list{
+        background-color: rgb(235, 231, 231);
+        display: flex;
+        border-radius: 6px;
+        margin-bottom: 8px;
+        .profile{
+            flex:2;
+            background-size: cover;
+            background-position: center;
+            border-radius: 6px 0 0 6px;
+        }
+        .cont{
+            h3,p{
+                margin-top:8px;
+                margin-bottom: 4px;
+            }
+            a{
+                color: teal;
+            }
+            flex:8;
+            padding: 6px;
+        }
+    }
+}

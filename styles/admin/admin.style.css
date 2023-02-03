@@ -1,0 +1,186 @@
+.login_bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_bg .login_box {
+  background-color: rgb(199, 179, 179);
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 6px 1px rgb(214, 173, 173);
+}
+.login_bg .login_box h1 {
+  text-align: center;
+}
+.login_bg .login_box td {
+  padding: 8px;
+}
+.login_bg .login_box td input {
+  padding: 6px;
+  outline: none;
+  border-radius: 6px;
+  border: none;
+}
+.login_bg .login_box td input[type=submit] {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+.login_bg .login_box .submitbtn {
+  text-align: right;
+}
+
+.adminHead {
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  height: 60px;
+  text-align: center;
+}
+
+.adminBody {
+  display: flex;
+  height: 200vh;
+}
+.adminBody .adminSidebar {
+  width: 190px;
+}
+.adminBody .adminSidebar .adminSideCont {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+}
+.adminBody .adminSidebar .adminSideCont ul {
+  list-style: none;
+}
+.adminBody .adminSidebar .adminSideCont ul a {
+  color: teal;
+  font-weight: bold;
+}
+.adminBody .adminSidebar .adminSideCont ul li {
+  position: relative;
+  line-height: 32px;
+}
+.adminBody .adminSidebar .adminSideCont ul li i {
+  position: absolute;
+  left: -20px;
+  top: 8px;
+}
+.adminBody .adminContent {
+  width: 100%;
+  background-color: rgb(226, 231, 235);
+  padding: 6px;
+}
+.adminBody .adminContent .contTitle {
+  background-color: rgb(180, 175, 175);
+  padding: 6px;
+  border-radius: 6px;
+}
+.adminBody .adminContent .contTitle h2 {
+  margin: 6px;
+  color: rgb(224, 215, 215);
+}
+.adminBody .adminContent .contTitle h2 button {
+  margin: 0px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  color: white;
+  font-size: 20px;
+  background-color: rgb(69, 112, 61);
+  margin-left: 8px;
+  margin-top: 0;
+  float: right;
+}
+.adminBody .adminContent .contTitle h2 button:hover {
+  background-color: rgb(94, 138, 86);
+}
+.adminBody .adminContent .contTable {
+  margin-top: 6px;
+  border-radius: 6px;
+  padding: 6px;
+}
+.adminBody .adminContent .contTable table {
+  width: 100%;
+}
+.adminBody .adminContent .contTable table td:first-child {
+  width: 30px;
+  text-align: center;
+}
+.adminBody .adminContent .contTable table tbody td:last-child h3 {
+  margin: 6px;
+}
+.adminBody .adminContent .contTable table tbody td:last-child button {
+  margin: 3px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  color: rgb(199, 186, 186);
+  font-size: "";
+  background-color: "";
+}
+.adminBody .adminContent .contTable table tbody td:last-child button:hover {
+  background-color: "";
+}
+.adminBody .adminContent .contTable table tbody td:last-child a:nth-child(2) > button {
+  background-color: rgb(20, 124, 165);
+}
+.adminBody .adminContent .contTable table tbody td:last-child a:nth-child(2) > button:hover {
+  background-color: rgb(88, 164, 194);
+}
+.adminBody .adminContent .contTable table tbody td:last-child a:nth-child(3) > button {
+  background-color: rgb(209, 97, 32);
+}
+.adminBody .adminContent .contTable table tbody td:last-child a:nth-child(3) > button:hover {
+  background-color: rgb(218, 153, 116);
+}
+.adminBody .adminContent .contTable table tbody td:last-child button:nth-child(4) {
+  background-color: rgb(165, 20, 20);
+}
+.adminBody .adminContent .contTable table tbody td:last-child button:nth-child(4):hover {
+  background-color: rgb(185, 93, 93);
+}
+.adminBody .adminContent .contTable .editTable td {
+  text-align: left !important;
+}
+.adminBody .adminContent .contTable .editTable td h2, .adminBody .adminContent .contTable .editTable td h6 {
+  margin: 0px;
+  padding: 0px;
+}
+.adminBody .adminContent .contTable .editTable td input,
+.adminBody .adminContent .contTable .editTable td textarea,
+.adminBody .adminContent .contTable .editTable td select {
+  width: 99%;
+  padding: 6px;
+  outline: none;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+.adminBody .adminContent .contTable thead {
+  font-weight: bold;
+}
+.adminBody .adminContent .contTable table, .adminBody .adminContent .contTable tr, .adminBody .adminContent .contTable td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+.editor-cont-class {
+  background-color: white !important;
+}
+
+.rt-submit {
+  float: right;
+  background-color: green;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px !important;
+}
+.rt-submit:hover {
+  background-color: rgb(60, 148, 60);
+}/*# sourceMappingURL=admin.style.css.map */
