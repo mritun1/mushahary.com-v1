@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/draft-convert": "^2.1.4",
     "@types/react-draft-wysiwyg": "^1.13.4",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "sass": "^1.57.1"
   }
 }

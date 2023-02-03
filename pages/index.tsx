@@ -6,6 +6,7 @@ import Header from '../component/common/header'
 import { useState } from 'react'
 
 
+
 //FUNTION FOR FETCHING SKILLS - START
 export async function getServerSideProps() {
   let data = await fetch('http://localhost:3000/api/resume/skills')
@@ -26,527 +27,473 @@ export default function Home(props: { allBlogs: []; }) {
         <title>Mritunjoy Mushahary - Personal website</title>
         <meta name="description" content="Mritunjoy Mushahary - Personal website" />
         <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
+
+        
       </Head>
+      <style >{`
+                  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
-      <main className='container'>
+                  html,  body {
+                      font-family: 'Roboto', sans-serif;
+                  }
+          
+                  body {
+                      margin: 0px;
+                  }
+          
+                  .parent {
+                      background-color: white;
+                      border: 2px solid black;
+                      /* height:1000px; */
+          
+                  }
+          
+                  .child {
+                      background-color: #E6ECE5;
+                      /* border: 2px solid black; */
+                      /* height:900px; */
+                      display: block;
+                      width: 45%;
+                      margin: auto;
+                      padding: 5px;
+                  }
+          
+                  .child1 {
+                      background-color: #E6ECE5;
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      /* height:150px; */
+                      text-align: center;
+          
+                  }
+          
+                  .child1>p>a>button {
+                      /* border:2px solid black; */
+                      color: #4E6754;
+                  }
+          
+                  .child1>p>a {
+                      text-decoration: none;
+                  }
+          
+                  .child1>p>a>button {
+                      background: none;
+                      border: none;
+                  }
+          
+                  .child2 {
+                      background-color: #E6ECE5;
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      /* height: 150px; */
+                  }
+          
+                  .elon-box1 {
+                      background-color: #E6ECE5;
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      /* height:60px; */
+                  }
+          
+                  .elon {
+                      background-color: #E6ECE5;
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      /* height:60px; */
+                      display: flex;
+                      justify-content: center;
+          
+                  }
+          
+                  .elon-photo {
+                      background-image: url(/imgs/photos/elon-musk-spacex-tesla-ceo-ovr8vqe9a8lo0dso.jpg);
+                      background-size: cover;
+                      background-repeat: norepeat;
+                      background-position: center;
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      height: 90px;
+                      width: 90px;
+                      border-radius: 50%;
+                  }
+          
+                  .elon-box2 {
+                      background-color: #E6ECE5;
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      /* height: 50px; */
+                      text-align: center;
+                  }
+                 
+                  .elon-box2>p {
+                      color: #4E6754;
+                  }
+          
+                  .elon-box2>h1 {
+                      margin-bottom: 0px;
+                      color: #3C543B;
+                  }
+          
+                  .elon-box2>hr {
+                      background-color: #3EC943;
+                  }
+          
+                  .child3 {
+                      background-color: #BEDBB7;
+                      padding: 5px;
+                      border-radius: 6px;
+                      margin: 8px;
+                      /* padding-left:8px; */
+                  }
+          
+                  .child3>h2 {
+                      margin: 3px;
+                      padding-left: 8px;
+                      color: #3C543B;
+                      /* border:2px solid black; */
+                  }
+                  .child3:hover {
+                      background-color:#96a98f;
+                  }
+          
+                  .child4 {
+                      /* background-color: #97CB8E; */
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      /* height: 150px; */
+                      display: flex;
+                  }
+                 
+                  .photo-box {
+                      /* background-color: purple; */
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      /* height:150px; */
+                      flex: 3;
+                      justify-content: center;
+                      /* display: flex; */
+                  }
+                  .child4 > .photo-box:hover {
+                      background-color:#96a98f;
+                  }
+          
+                  .photo {
+                      background-image: url("/imgs/photos/elon-musk-spacex-tesla-ceo-ovr8vqe9a8lo0dso.jpg");
+                      background-size: cover;
+                      background-repeat: norepeat;
+                      background-position: center;
+                      /* border: 2px solid black; */
+                      height: 170px;
+                      width: 170px;
+                      border-radius: 50%;
+                  }
+          
+                  .photo-a {
+                      background-color: #97CB8E;
+                      border-radius: 6px;
+                      margin: 10px;
+                  }
+          
+                  .p-box {
+                      padding: 10px;
+                      background-color: #97CB8E;
+                      /* border:2px solid black; */
+                      /* height:90px; */
+                      margin: 3px;
+                      text-align: center;
+                  }
+          
+                  .p-box>h3>a {
+                      /* border:2px solid black; */
+                      text-decoration: none;
+                      color: #3C543B;
+                  }
+          
+                  .p-box>h3 {
+                      margin: 0px;
+                  }
+          
+                  .p-div {
+                      background-color: #97CB8E;
+                      /* border:2px solid black; */
+                      /* height:90px; */
+                      margin: 3px;
+                      display: flex;
+                      justify-content: center;
+                      padding: 8px;
+                  }
+          
+          
+                  .child6 {
+                      background-color: #E6ECE5;
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      /* height: 150px; */
+                      justify-content: center;
+                      display: flex;
+                      flex-wrap: wrap;
+                  }
+                  .child6 > .product:hover {
+                      background-color:#96a98f;
+                  }
+          
+                  .product {
+                      background-color: #438541;
+                      /* border: 2px solid black; */
+                      /* height: 150px; */
+                      margin: 3px;
+                      width: 200px;
+                      border-radius:6px;
+                  }
+          
+                  .photos-content {
+                      /* background-color: purple; */
+                      /* border: 2px solid black; */
+                      /* height:80px; */
+                      margin: 3px;
+                      justify-content: center;
+                      display: flex;
+                  }
+          
+                  .photos-frame {
+                      background-image: url("/imgs/photos/elon-musk-spacex-tesla-ceo-ovr8vqe9a8lo0dso.jpg");
+                      background-size: cover;
+                      background-repeat: norepeat;
+                      background-position: center;
+                      /* border: 2px solid black; */
+                      height: 80px;
+                      margin: 3px;
+                      width: 80px;
+                      border-radius: 6px;
+                  }
+                  .second-box {
+                      /* background-color: yellow; */
+                      /* border: 2px solid black; */
+                      /* height: 50px; */
+                      margin: 3px;
+                  }
+                  .second-box > a {
+                      text-decoration:none;
+                  }
+                  .second-box > a > h3 {
+                      text-align:center;
+                      margin:0px;
+                      color:#B8E7C0;
+                  }
+                 .second-box >a > p{
+                  text-align:center;
+                  margin:0px;
+                  color:#93A092;
+                 }
+                  .child7 {
+                      background-color:#E6ECE5;
+                      /* border: 2px solid black; */
+                      margin: 3px;
+                      height: 150px;
+                      padding-top:90px;
+                  }
+                  .child7 > p {
+                      /* background-color:#3EC943; */
+                      /* border:2px solid black; */
+                      margin:3px;
+                      text-align:center;
+                  }
+                  .child7 > p:nth-child(2) {
+                      /* background-color:#E6ECE5; */
+                      /* border:2px solid black; */
+                      margin:3px;
+                      text-align:center;
+                  }
+        `}</style>
 
-        <Header/>
+     <main>
+        <div className="parent">
 
-        <div className="content">
-          <div className="content_middle">
+        <div className="child">
 
-            <div className="c_title">
-              <h2>Resume</h2>
-            </div>
-
-            <div className="c_profile">
-              <div className="profile_left" >
-                <div className='profile_pic'></div>
-              </div>
-              <div className="profile_right">
-                <div className="profile_name">
-                  <h2>Mr. Mritunjoy Mushahary</h2>
-                </div>
-                <div className="profile_des">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td>Current Job:</td>
-                        <td>PHP Backend Developer (LAMP)</td>
-                      </tr>
-                      <tr>
-                        <td>Current Company:</td>
-                        <td>
-                          72dragons
-                          <Link className="company_links" target="_blank" href="https://72dragonsservices.com/">
-                            More Details &gt;&gt;
-                          </Link>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Technology:</td>
-                        <td>core PHP, MySQL, Apache, HTML5, CSS3</td>
-                      </tr>
-                      <tr>
-                        <td>Start From:</td>
-                        <td>May 15, 2022</td>
-                      </tr>
-                      <tr>
-                        <td>Current CTC:</td>
-                        <td>2.7 LPA</td>
-                      </tr>
-                      <tr>
-                        <td>Notice Period:</td>
-                        <td>3 Months</td>
-                      </tr>
-                      <tr>
-                        <td>My Ambition:</td>
-                        <td>To become Blockchain and ML/AI Engineer in Future.</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <div className="resume">
-              <div className="resume_heading">
-                <h3>SKILLs</h3>
-                
-              </div>
-              <div className="resume_content">
-                
-                <table>
-                  <tbody>
-
-                    {/* {
-                      items.map((skills: { skill: string, id: number, exp: number }) => {
-                        return <tr key={skills.id}>
-                          <td>{skills.skill}:</td>
-                          <td className='stars'>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star-half-stroke"></i>
-                          </td>
-                          <td>{skills.exp} yrs exp.</td>
-                        </tr>;
-                      })
-                    } */}
-
-                    {/* <hr /> */}
-
-                    <tr>
-                      <td>HTML5/CSS3:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star-half-stroke"></i>
-                      </td>
-                      <td>4 yrs exp.</td>
-                    </tr>
-
-                    <tr>
-                      <td>PHP:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>3 yrs exp.</td>
-                    </tr>
-                    <tr>
-                      <td>Golang (GO):</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>1 yrs exp.</td>
-                    </tr>
-                    <tr>
-                      <td>React.js/Next.js:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>1 yrs exp.</td>
-                    </tr>
-                    <tr>
-                      <td>JavaScript:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>3 yrs exp.</td>
-                    </tr>
-                    <tr>
-                      <td>MySQL:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>2 yrs exp.</td>
-                    </tr>
-                    <tr>
-                      <td>jQuery:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>1 yrs exp.</td>
-                    </tr>
-                    
-                    <tr>
-                      <td>Dart/Flutter:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>6 months exp.</td>
-                    </tr>
-                    <tr>
-                      <td>Vue.js/Nuxt.js:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>6 months exp.</td>
-                    </tr>
-                    <tr>
-                      <td>C/C++:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star-half-stroke"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>3 months exp.</td>
-                    </tr>
-                    <tr>
-                      <td>XML/JSON:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>3 yrs exp.</td>
-                    </tr>                    
-                    <tr>
-                      <td>SEO:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>6 months exp.</td>
-                    </tr>
-                    <tr>
-                      <td>UI/UX Design:</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>1 yrs exp.</td>
-                    </tr>
-                    <tr>
-                      <td>Data Structure (DSA):</td>
-                      <td className='stars'>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </td>
-                      <td>3 months exp.</td>
-                    </tr>
-                    <tr>
-                      <td>Libraries:</td>
-                      <td colSpan={2}>
-
-                        <span className='lib'>
-                          <span>CSS</span>
-                          <span>Bootstrap</span>
-                        </span>
-
-                        <span className='lib'>
-                          <span>CSS</span>
-                          <span>TailwindCSS</span>
-                        </span>
-
-                        <span className='lib'>
-                          <span>PHP</span>
-                          <span>Fast2sms.com API</span>
-                        </span>
-
-                        <span className='lib'>
-                          <span>PHP</span>
-                          <span>PHPmailer</span>
-                        </span>
-
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tools:</td>
-                      <td colSpan={2}>
-                        <span className='tags'>SCSS/SASS</span>
-                        <span className='tags'>FTP/Putty/SSH</span>
-                        <span className='tags'>XAMPP/Apache2</span>
-                        <span className='tags'>Figma.com</span>
-                        <span className='tags'>AWS EC2/s3</span>
-                        <span className='tags'>Git/Github</span>
-                        <span className='tags'>Google Analytics</span>
-                        <span className='tags'>Google Search Console</span>
-                        <span className='tags'>Linux</span>
-                        <span className='tags'>Corntab/Cornjob</span>
-                        <span className='tags'>Shell Scripting</span>                        
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="resume_heading">
-                <h3>PROJECTs</h3>
-              </div>
-              <div className="resume_projects">
-                <p>Here is the list of my Projects.</p>
-
-                <div className="project">
-                  <div className="project_head">
-                    <div className="project_head_text">
-                      <h4>
-                        72dragons.health
-                        <Link target="_blank" href="https://72dragons.health/">view &gt;&gt;</Link>
-                      </h4>
-                    </div>
-                  </div>
-                  <div className="project_content">
-                    <p>72dragons.health is website for APHA (American Public Health Association) Photos and Videos Gallery.</p>
-                    <p className='title'>Back-end Build in PHP & MySQL.</p>
-                    <ol className='ol'>
-                      <li>Login & Logout system in core PHP, for Admin.</li>
-                      <li>CRUD Operation API in PHP, for uploading Photos, Videos and Forms data.</li>
-                      <li>Connecting with Google Analytics, for getting website traffics.</li>
-                    </ol>
-                  </div>
-                </div>
-
-                <div className="project">
-                  <div className="project_head">
-                    <div className="project_head_text">
-                      <h4>
-                        Contract Tracking Tool
-                        
-                      </h4>
-                    </div>
-                  </div>
-                  <div className="project_content">
-                    <p>Contract Tracking Tool is a Private website for Company&apos;s Employees used only. Here, every functional and area manager can see the details of the employees under him. i.e., when the employee is hired and when his contract will expire.</p>
-                    <p className='title'>Back-end Build in PHP & MySQL.</p>
-                    <ol className='ol'>
-                      <li>Here, my own PHP Web Framework is used. Please <Link href="https://github.com/mritun1/MritunjoYframe" target="_blank">Click Here</Link> to check my self-made PHP Web Framework.</li>
-                      <li>Login, Logout, Change Password and Forgot Password system for Admin or Managers.</li>
-                      <li>CRUD Operation API in PHP, for Add Employees and his details.</li>
-                    </ol>
-                  </div>
-                </div>
-
-                <div className="project">
-                  <div className="project_head">
-                    <div className="project_head_text">
-                      <h4>
-                        MRITUNJOY.COM
-                        <Link target="_blank" href="https://72dragons.health/">view &gt;&gt;</Link>
-                      </h4>
-                    </div>
-                  </div>
-                  <div className="project_content">
-                    <p>MRITUNJOY.COM is a Personal website created for sharing my own personal experiences.</p>
-                    <p className='title'>Front-end built in Next.js, Back-end built in Golang Fiber and MySQL database.</p>
-                    <ol className='ol'>
-                      <li>Golang Fiber Middleware for Authentication.</li>
-                      <li>Golang Fiber Rest API Admin can Login and Add new articles.</li>
-                      <li>Viewers can send Email to the admin directly from website&apos;s contact page.</li>
-                    </ol>
-                  </div>
-                </div>
-
-              </div>
-
-              <div className="resume_heading">
-                <h3>PROFILEs</h3>
-              </div>
-
-              <div className="resume_profiles">
-
-                <div className="social">
-                  <Image
-                    alt='LeetCode'
-                    height={20}
-                    width={20}
-                    src="/../public/imgs/social/LeetCode.png"
-                  />
-                  <Link href="https://leetcode.com/mritunjoy/" target="_blank">
-                    LeetCode/mritunjoy
-                  </Link>
-                </div>
-
-                <div className="social">
-                  <Image
-                    alt='Github'
-                    height={20}
-                    width={20}
-                    src="/../public/imgs/social/github.png"
-                  />
-                  <Link href="https://github.com/mritun1" target="_blank">
-                    Github/mritun1
-                  </Link>
-                </div>
-
-                <div className="social">
-                  <Image
-                    alt='LinkedIn'
-                    height={20}
-                    width={20}
-                    src="/../public/imgs/social/linkedin.png"
-                  />
-                  <Link href="https://www.linkedin.com/in/mritunjoy8011/" target="_blank">
-                    LinkedIn/mritunjoy8011
-                  </Link>
-                </div>
-
-                <div className="social">
-                  <Image
-                    alt='Facebook'
-                    height={20}
-                    width={20}
-                    src="/../public/imgs/social/facebook.png"
-                  />
-                  <Link href="https://www.facebook.com/mritunjoy8011" target="_blank">
-                    Facebook/mritunjoy8011
-                  </Link>
-                </div>
-
-                <div className="social">
-                  <Image
-                    alt='Twitter'
-                    height={20}
-                    width={20}
-                    src="/../public/imgs/social/twitter.png"
-                  />
-                  <Link href="https://twitter.com/mritunjoy8011" target="_blank">
-                    Twitter/mritunjoy8011
-                  </Link>
-                </div>
-
-                <div className="social">
-                  <Image
-                    alt='Golang Forum'
-                    height={20}
-                    width={20}
-                    src="/../public/imgs/social/golangbridge.png"
-                  />
-                  <Link href="https://forum.golangbridge.org/u/mritunjoy_mushahary/" target="_blank">
-                    GolangBridge/u/mritunjoy_mushahary/
-                  </Link>
-                </div>
-
-              </div>
-
-              <div className="resume_heading">
-                <h3>
-                  ADDRESS & CONTACT
-                  <Link href="">Send Email &gt;&gt;</Link>
-                </h3>
-              </div>
-
-              <div className="resume_address">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>PIN:</td>
-                      <td>783360</td>
-                    </tr>
-                    <tr>
-                      <td>Town/City:</td>
-                      <td>Gossaigaon</td>
-                    </tr>
-                    <tr>
-                      <td>Dist:</td>
-                      <td>Kokrajhar</td>
-                    </tr>
-                    <tr>
-                      <td>State:</td>
-                      <td>Assam</td>
-                    </tr>
-                    <tr>
-                      <td>Country:</td>
-                      <td>INDIA</td>
-                    </tr>
-                    <tr>
-                      <td>Phone:</td>
-                      <td>+91-8011501382</td>
-                    </tr>
-                    <tr>
-                      <td>Email:</td>
-                      <td>
-                        m.mushahary1@gmail.com
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="resume_heading">
-                <h3>
-                  Tools Used for Development
-                </h3>
-              </div>
-
-              <div className="resume_tools">
-                <p>Tools that helps me for Development.</p>
-                <div className='resume_tools_link'>
-                  <Link href="https://www.figma.com/" target="_blank">Figma.com</Link>
-                  <Link href="https://www.google.com/docs/about/" target={"_blank"}>Google Docs</Link>
-                  <Link href="https://www.google.com/sheets/about/" target={"_blank"}>Google Sheets</Link>
-                  <Link href="https://www.google.com/slides/about/" target={"_blank"}>Google Presentation</Link>
-                  <Link href="https://meet.google.com/" target={"_blank"}>Google Meet</Link>
-                  <Link href="https://css-tricks.com/the-shapes-of-css/" target={"_blank"}>CSS Tricks</Link>
-                  <Link href="https://www.gloomaps.com/" target={"_blank"}>Site-maping Tool</Link>
-                  <Link href="https://imgbox.com/" target={"_blank"}>Upload & Share Image Tool</Link>
-                  <Link href="https://jsfiddle.net/" target={"_blank"}>Sharing codes Tool</Link>
-                  <Link href="https://sharetext.me/" target={"_blank"}>Sharing Text Tool</Link>
-                  <Link href="https://quillbot.com/grammar-check" target={"_blank"}>Grammar Check</Link>
-                  <Link href="https://jsonlint.com/" target={"_blank"}>JSON Validator</Link>
-                  <Link href="https://fontawesome.com/icons" target={"_blank"}>Font-awesome Icons</Link>
-                  <Link href="https://www.flaticon.com/" target={"_blank"}>Flat Icons</Link>
-                  <Link href="https://www.remove.bg/" target={"_blank"}>Background Image Remover</Link>
-                  <Link href="https://www.rebasedata.com/convert-sql-to-csv-online" target={"_blank"}>.SQL to .CSV Converter</Link>
-                  <Link href="https://www.tutorialspoint.com/whiteboard.htm" target={"_blank"}>White board</Link>
-                </div>
-              </div>
+            <div className="child1">
+                <p>
+                    <a href="">
+                        <button>
+                            About us
+                        </button>
+                    </a>
+                    <a href="">
+                        <button>
+                            Contact us
+                        </button>
+                    </a>
+                    <a href="">
+                        <button>
+                            Terms & conditions
+                        </button>
+                    </a>
+                    </p>
 
             </div>
-
-          </div>
+            <div className="child2">
+                <div className="elon-box1">
+                    <div className="elon">
+                        <div className="elon-photo"></div>
+                    </div>
+                </div>
+                <div className="elon-box2">
+                    <h1>
+                        Mushahary Family-Site
+                    </h1>
+                    <p>
+                        This is the personal website for the Mushahary family
+                    </p>
+                    <hr 
+                    style={{
+                      height:"5px", width:"80%"
+                    }} />
+                </div>
+            </div>
+            <div className="child3">
+                <h2>
+                    Our Team & Developers
+                </h2>
+            </div>
+            <div className="child4">
+                <div className="photo-box">
+                    <div className="photo-a">
+                        <div className="p-div">
+                            <div className="photo"></div>
+                        </div>
+                        <div className="p-box">
+                            <h3>
+                                <a href="">
+                                    Mritunjoy Mushahary
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div className="photo-box">
+                    <div className="photo-a">
+                        <div className="p-div">
+                            <div className="photo"> </div>
+                        </div>
+                        <div className="p-box">
+                            <h3>
+                                <a href="">
+                                    Pritom Mushahary
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="child3">
+                <h2>
+                  Our Service & Products
+                </h2>
+            </div>
+            <div className="child6">
+                <div className="product">
+                    <div className="photos-content">
+                        <div className="photos-frame"></div>
+                    </div>
+                    <div className="second-box">
+                       <a href="">
+                        <h3>
+                            Photos
+                        </h3>
+                        <p>
+                            300+
+                        </p>
+                       </a>
+                    </div>
+                </div>
+                <div className="product">
+                    <div className="photos-content">
+                        <div className="photos-frame"></div>
+                    </div>
+                    <div className="second-box">
+                       <a href="">
+                        <h3>
+                            Videos
+                        </h3>
+                        <p>
+                            300+
+                        </p>
+                       </a>
+                    </div>
+                </div>
+                <div className="product">
+                    <div className="photos-content">
+                        <div className="photos-frame"></div>
+                    </div>
+                    <div className="second-box">
+                       <a href="">
+                        <h3>
+                            Articles
+                        </h3>
+                        <p>
+                            300+
+                        </p>
+                       </a>
+                    </div>
+                </div>
+                <div className="product">
+                    <div className="photos-content">
+                        <div className="photos-frame"></div>
+                    </div>
+                    <div className="second-box">
+                        <a href="">
+                            <h3>
+                                Forum
+                            </h3>
+                            <p>
+                                300+
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div className="product">
+                    <div className="photos-content">
+                        <div className="photos-frame"></div>
+                    </div>
+                    <div className="second-box">
+                      <a href="">
+                        <h3>
+                            Tools
+                        </h3>
+                        <p>
+                            300+
+                        </p>
+                      </a>
+                    </div>
+                </div>
+                <div className="product">
+                    <div className="photos-content">
+                        <div className="photos-frame"></div>
+                    </div>
+                    <div className="second-box">
+                      <a href="">
+                        <h3>
+                            Libraries
+                        </h3>
+                        <p>
+                            300+
+                        </p>
+                      </a>
+                    </div>
+                </div>
+            </div>
+            <div className="child7">
+                <p>
+                    Designed & Developed by <b>Mushahary Family</b>
+                </p>
+                <p>
+                    2022-2023
+                </p>
+            </div>
         </div>
 
-        <Footer />
-
-      </main>
+    </div>
+     </main>
 
       
       
