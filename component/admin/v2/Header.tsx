@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Header() {
     return (
         <div>
@@ -5,11 +7,11 @@ function Header() {
 
 <div className="admin-head-left">
     <div>
-        <a href="">
+        <Link href="/" target={"_blank"}>
             <button>
                 View Site 	&gt; 	&gt;
             </button>
-        </a>
+        </Link>
     </div>
 </div>
 

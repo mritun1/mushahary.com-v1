@@ -9,28 +9,28 @@ import { useState } from 'react'
 
 //FUNTION FOR FETCHING SKILLS - START
 export async function getServerSideProps() {
-  let data = await fetch('http://localhost:3000/api/resume/skills')
-  let allBlogs = await data.json()
-  return {
-    props: { allBlogs }
-  }
+    let data = await fetch('http://localhost:3000/api/resume/skills')
+    let allBlogs = await data.json()
+    return {
+        props: { allBlogs }
+    }
 }
 //FUNTION FOR FETCHING SKILLS - END
 
 export default function Home(props: { allBlogs: []; }) {
 
-  const [items] = useState(props.allBlogs);
- 
-  return (
-    <div >
-      <Head>
-        <title>Mritunjoy Mushahary - Personal website</title>
-        <meta name="description" content="Mritunjoy Mushahary - Personal website" />
-        <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
+    const [items] = useState(props.allBlogs);
 
-        
-      </Head>
-      <style >{`
+    return (
+        <div >
+            <Head>
+                <title>Mritunjoy Mushahary - Personal website</title>
+                <meta name="description" content="Mritunjoy Mushahary - Personal website" />
+                <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
+
+
+            </Head>
+            <style >{`
                   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
                   html,  body {
@@ -304,199 +304,200 @@ export default function Home(props: { allBlogs: []; }) {
                       margin:3px;
                       text-align:center;
                   }
-        `}</style>
+        `}
+        </style>
 
-     <main>
-        <div className="parent">
+            <main>
+                <div className="parent">
 
-        <div className="child">
+                    <div className="child">
 
-            <div className="child1">
-                <p>
-                    <a href="">
-                        <button>
-                            About us
-                        </button>
-                    </a>
-                    <a href="">
-                        <button>
-                            Contact us
-                        </button>
-                    </a>
-                    <a href="">
-                        <button>
-                            Terms & conditions
-                        </button>
-                    </a>
-                    </p>
-
-            </div>
-            <div className="child2">
-                <div className="elon-box1">
-                    <div className="elon">
-                        <div className="elon-photo"></div>
-                    </div>
-                </div>
-                <div className="elon-box2">
-                    <h1>
-                        Mushahary Family-Site
-                    </h1>
-                    <p>
-                        This is the personal website for the Mushahary family
-                    </p>
-                    <hr 
-                    style={{
-                      height:"5px", width:"80%"
-                    }} />
-                </div>
-            </div>
-            <div className="child3">
-                <h2>
-                    Our Team & Developers
-                </h2>
-            </div>
-            <div className="child4">
-                <div className="photo-box">
-                    <div className="photo-a">
-                        <div className="p-div">
-                            <div className="photo"></div>
-                        </div>
-                        <div className="p-box">
-                            <h3>
-                                <a href="">
-                                    Mritunjoy Mushahary
-                                </a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div className="photo-box">
-                    <div className="photo-a">
-                        <div className="p-div">
-                            <div className="photo"> </div>
-                        </div>
-                        <div className="p-box">
-                            <h3>
-                                <a href="">
-                                    Pritom Mushahary
-                                </a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="child3">
-                <h2>
-                  Our Service & Products
-                </h2>
-            </div>
-            <div className="child6">
-                <div className="product">
-                    <div className="photos-content">
-                        <div className="photos-frame"></div>
-                    </div>
-                    <div className="second-box">
-                       <a href="">
-                        <h3>
-                            Photos
-                        </h3>
-                        <p>
-                            300+
-                        </p>
-                       </a>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photos-content">
-                        <div className="photos-frame"></div>
-                    </div>
-                    <div className="second-box">
-                       <a href="">
-                        <h3>
-                            Videos
-                        </h3>
-                        <p>
-                            300+
-                        </p>
-                       </a>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photos-content">
-                        <div className="photos-frame"></div>
-                    </div>
-                    <div className="second-box">
-                       <a href="">
-                        <h3>
-                            Articles
-                        </h3>
-                        <p>
-                            300+
-                        </p>
-                       </a>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photos-content">
-                        <div className="photos-frame"></div>
-                    </div>
-                    <div className="second-box">
-                        <a href="">
-                            <h3>
-                                Forum
-                            </h3>
+                        <div className="child1">
                             <p>
-                                300+
+                                <a href="">
+                                    <button>
+                                        About us
+                                    </button>
+                                </a>
+                                <a href="">
+                                    <button>
+                                        Contact us
+                                    </button>
+                                </a>
+                                <a href="">
+                                    <button>
+                                        Terms & conditions
+                                    </button>
+                                </a>
                             </p>
-                        </a>
+
+                        </div>
+                        <div className="child2">
+                            <div className="elon-box1">
+                                <div className="elon">
+                                    <div className="elon-photo"></div>
+                                </div>
+                            </div>
+                            <div className="elon-box2">
+                                <h1>
+                                    Mushahary Family-Site
+                                </h1>
+                                <p>
+                                    This is the personal website for the Mushahary family
+                                </p>
+                                <hr
+                                    style={{
+                                        height: "5px", width: "80%"
+                                    }} />
+                            </div>
+                        </div>
+                        <div className="child3">
+                            <h2>
+                                Our Team & Developers
+                            </h2>
+                        </div>
+                        <div className="child4">
+                            <div className="photo-box">
+                                <div className="photo-a">
+                                    <div className="p-div">
+                                        <div className="photo"></div>
+                                    </div>
+                                    <div className="p-box">
+                                        <h3>
+                                            <a href="">
+                                                Mritunjoy Mushahary
+                                            </a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="photo-box">
+                                <div className="photo-a">
+                                    <div className="p-div">
+                                        <div className="photo"> </div>
+                                    </div>
+                                    <div className="p-box">
+                                        <h3>
+                                            <a href="">
+                                                Pritom Mushahary
+                                            </a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="child3">
+                            <h2>
+                                Our Service & Products
+                            </h2>
+                        </div>
+                        <div className="child6">
+                            <div className="product">
+                                <div className="photos-content">
+                                    <div className="photos-frame"></div>
+                                </div>
+                                <div className="second-box">
+                                    <a href="">
+                                        <h3>
+                                            Photos
+                                        </h3>
+                                        <p>
+                                            300+
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="product">
+                                <div className="photos-content">
+                                    <div className="photos-frame"></div>
+                                </div>
+                                <div className="second-box">
+                                    <a href="">
+                                        <h3>
+                                            Videos
+                                        </h3>
+                                        <p>
+                                            300+
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="product">
+                                <div className="photos-content">
+                                    <div className="photos-frame"></div>
+                                </div>
+                                <div className="second-box">
+                                    <a href="">
+                                        <h3>
+                                            Articles
+                                        </h3>
+                                        <p>
+                                            300+
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="product">
+                                <div className="photos-content">
+                                    <div className="photos-frame"></div>
+                                </div>
+                                <div className="second-box">
+                                    <a href="">
+                                        <h3>
+                                            Forum
+                                        </h3>
+                                        <p>
+                                            300+
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="product">
+                                <div className="photos-content">
+                                    <div className="photos-frame"></div>
+                                </div>
+                                <div className="second-box">
+                                    <a href="">
+                                        <h3>
+                                            Tools
+                                        </h3>
+                                        <p>
+                                            300+
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="product">
+                                <div className="photos-content">
+                                    <div className="photos-frame"></div>
+                                </div>
+                                <div className="second-box">
+                                    <a href="">
+                                        <h3>
+                                            Libraries
+                                        </h3>
+                                        <p>
+                                            300+
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="child7">
+                            <p>
+                                Designed & Developed by <b>Mushahary Family</b>
+                            </p>
+                            <p>
+                                2022-2023
+                            </p>
+                        </div>
                     </div>
+
                 </div>
-                <div className="product">
-                    <div className="photos-content">
-                        <div className="photos-frame"></div>
-                    </div>
-                    <div className="second-box">
-                      <a href="">
-                        <h3>
-                            Tools
-                        </h3>
-                        <p>
-                            300+
-                        </p>
-                      </a>
-                    </div>
-                </div>
-                <div className="product">
-                    <div className="photos-content">
-                        <div className="photos-frame"></div>
-                    </div>
-                    <div className="second-box">
-                      <a href="">
-                        <h3>
-                            Libraries
-                        </h3>
-                        <p>
-                            300+
-                        </p>
-                      </a>
-                    </div>
-                </div>
-            </div>
-            <div className="child7">
-                <p>
-                    Designed & Developed by <b>Mushahary Family</b>
-                </p>
-                <p>
-                    2022-2023
-                </p>
-            </div>
+            </main>
+
+
+
         </div>
-
-    </div>
-     </main>
-
-      
-      
-    </div>
-  )
+    )
 }

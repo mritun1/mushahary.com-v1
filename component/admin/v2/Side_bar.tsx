@@ -15,7 +15,7 @@ function Side_bar() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="/admin/v2/photos_dashboard">
                                         Photos
                                     </a>
                                 </li>
