@@ -509,7 +509,6 @@ export default function Home(props: { allBlogs: []; }) {
                                     <Link href="https://www.remove.bg/" target={"_blank"}>Background Image Remover</Link>
                                     <Link href="https://www.rebasedata.com/convert-sql-to-csv-online" target={"_blank"}>.SQL to .CSV Converter</Link>
                                     <Link href="https://www.tutorialspoint.com/whiteboard.htm" target={"_blank"}>White board</Link>
-                                    <Link href="https://dbdiagram.io/" target={"_blank"}>Database Diagram</Link>
                                 </div>
                             </div>
 
