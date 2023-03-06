@@ -14,8 +14,6 @@ const photos = () => {
 
                 <ArticlesHead></ArticlesHead>
 
-
-
                 <div className="photos-home2">
 
                     <a href="">
