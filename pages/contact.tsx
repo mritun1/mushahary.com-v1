@@ -10,6 +10,7 @@ export default function Contact() {
             <Head>
                 <title> About - Mritunjoy Mushahary Personal website</title>
                 <meta name="description" content="About - Mritunjoy Mushahary Personal website" />
+                <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
             </Head>
             <main className='container'>
                 <Header />

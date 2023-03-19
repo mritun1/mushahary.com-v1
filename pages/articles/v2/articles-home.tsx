@@ -1,209 +1,126 @@
-import { useRef, useState } from "react";
-import ArticlesHead from "../../../component/public/articles/ArticlesHead";
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import Footer from '../../../component/common/footer'
+import Header from '../../../component/common/header'
+import ArticlesCategory from '../../../component/public/articles/ArticlesCategory'
+import ArticlesSearch from '../../../component/public/articles/ArticlesSearch'
 
-
-
-const photos = () => {
-
-
-
-
+export default function ArticlesHome() {
     return (
-        <div>
-            <div className="photos-home">
+        <div >
+            <Head>
+                <title>Mushahary Family Articles</title>
+                <meta name="description" content="Mushahary Family Articles" />
+                <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
+            </Head>
+            <main className='container'>
 
-                <ArticlesHead></ArticlesHead>
+                <Header />
 
+                <div className="articles">
+                    
+                    <ArticlesCategory/>
 
-                <div className="photos-home2">
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-                </div>
-
-
-
-                <div className="photos-home3">
-
-                    <h1>
-                        Mushahary Family Articles
-                    </h1>
-                    <p>
-                        This is the title of mushahary family description.
-                    </p>
-                </div>
-
-
-                {/* Articles-Home Start */}
-
-
-                <div className="articles-home">
-
-                    <div className="articles-home-content">
-
-                        <a href="/articles/v2/articles-read">
-
-                            <div className="content-item">
-
-                                <div className="img"></div>
-
-                                <div className="img-box">
-
-                                    <h2>
-                                        This is the Articles Title.
-                                    </h2>
-
-                                    <p>
-                                        This is the description of the Articles. This is the description of the Articles. This is the description of the Articless.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </a>
-
-
-
-                        <a href="/articles/v2/articles-read">
-
-                            <div className="content-item">
-
-                                <div className="img"></div>
-
-                                <div className="img-box">
-
-                                    <h2>
-                                        This is the Articles Title.
-                                    </h2>
-
-                                    <p>
-                                        This is the description of the Articles. This is the description of the Articles. This is the description of the Articless.
-                                    </p>
-                                </div>
-
-                            </div>
-
-                        </a>
-
-
-
-
-
+                    <div className="photos_logo">
+                        <h1>Mushahary Family Articles</h1>
+                        <p>Here we want to share our experience with you. Here you will see all the Articles written by Mushahary Family.</p>
                     </div>
 
-                    <div className="articles-home-content">
+                    <ArticlesSearch/>
 
-                        <a href="/articles/v2/articles-read">
-
-                            <div className="content-item">
-
-                                <div className="img"></div>
-
-                                <div className="img-box">
-
-                                    <h2>
-                                        This is the Articles Title.
-                                    </h2>
-
-                                    <p>
-                                        This is the description of the Articles. This is the description of the Articles. This is the description of the Articless.
-                                    </p>
+                    <div className="articles_columns">
+                        <div>
+                            <Link href={"/articles/v2/articles-read"}>
+                                <div 
+                                className="img"
+                                style={{backgroundImage:`url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")`}}
+                                ></div>
+                                <div className="txt">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, facere inventore perferendis labore autem alias eius, voluptas optio dolorum, ullam error nostrum beatae saepe provident hic! Aperiam, consequuntur voluptate assumenda fugiat aliquid iusto quisquam incidunt?</p>
                                 </div>
-
-                            </div>
-
-                        </a>
-
-
-
-
-                        <a href="/articles/v2/articles-read">
-
-
-                            <div className="content-item">
-
-                                <div className="img"></div>
-
-                                <div className="img-box">
-
-                                    <h2>
-                                        This is the Articles Title.
-                                    </h2>
-
-                                    <p>
-                                        This is the description of the Articles. This is the description of the Articles. This is the description of the Articless.
-                                    </p>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href={"/articles/v2/articles-read"}>
+                                <div
+                                    className="img"
+                                    style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                ></div>
+                                <div className="txt">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, facere inventore perferendis labore autem alias eius, voluptas optio dolorum, ullam error nostrum beatae saepe provident hic! Aperiam, consequuntur voluptate assumenda fugiat aliquid iusto quisquam incidunt?</p>
                                 </div>
-
-                            </div>
-                        </a>
-
-
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href={""}>
+                                <div
+                                    className="img"
+                                    style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                ></div>
+                                <div className="txt">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, facere inventore perferendis labore autem alias eius, voluptas optio dolorum, ullam error nostrum beatae saepe provident hic! Aperiam, consequuntur voluptate assumenda fugiat aliquid iusto quisquam incidunt?</p>
+                                </div>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href={""}>
+                                <div 
+                                className="img"
+                                style={{backgroundImage:`url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")`}}
+                                ></div>
+                                <div className="txt">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, facere inventore perferendis labore autem alias eius, voluptas optio dolorum, ullam error nostrum beatae saepe provident hic! Aperiam, consequuntur voluptate assumenda fugiat aliquid iusto quisquam incidunt?</p>
+                                </div>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href={""}>
+                                <div 
+                                className="img"
+                                style={{backgroundImage:`url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")`}}
+                                ></div>
+                                <div className="txt">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, facere inventore perferendis labore autem alias eius, voluptas optio dolorum, ullam error nostrum beatae saepe provident hic! Aperiam, consequuntur voluptate assumenda fugiat aliquid iusto quisquam incidunt?</p>
+                                </div>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href={""}>
+                                <div
+                                    className="img"
+                                    style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                ></div>
+                                <div className="txt">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, facere inventore perferendis labore autem alias eius, voluptas optio dolorum, ullam error nostrum beatae saepe provident hic! Aperiam, consequuntur voluptate assumenda fugiat aliquid iusto quisquam incidunt?</p>
+                                </div>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href={""}>
+                                <div
+                                    className="img"
+                                    style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                ></div>
+                                <div className="txt">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, facere inventore perferendis labore autem alias eius, voluptas optio dolorum, ullam error nostrum beatae saepe provident hic! Aperiam, consequuntur voluptate assumenda fugiat aliquid iusto quisquam incidunt?</p>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
 
                 </div>
 
+                <Footer />
 
-                {/* Articles_Home End */}
-
-
-            </div>
-
-
+            </main>
         </div>
-    );
+    )
 }
-
-export default photos;

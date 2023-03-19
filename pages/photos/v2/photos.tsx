@@ -1,199 +1,83 @@
-import { useRef, useState } from "react";
-import PhotosHead from "../../../component/public/photos/PhotosHead";
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import Footer from '../../../component/common/footer'
+import Header from '../../../component/common/header'
+import PhotosCategory from '../../../component/public/photos/PhotosCategory'
+import PhotosSearch from '../../../component/public/photos/PhotosSearch'
 
-
-const photos = () => {
-
-const  [modal_show,modal_init] = useState(false)
-
-
+export default function Photos() {
     return (
-        <div>
-            <div className="photos-home">
+        <div >
+            <Head>
+                <title>Photos - Mushahary Family Personal Photos</title>
+                <meta name="description" content="Photos - Mushahary Family Personal Photos" />
+                <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
+            </Head>
+            <main className='container'>
 
-               <PhotosHead></PhotosHead>
+                <Header />
 
+                <div className="photos_home">
 
-                <div className="photos-home2">
+                    <PhotosCategory />
 
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-                </div>
-
-
-
-                <div className="photos-home3">
-
-                    <h1>
-                        Mushahary Family Photos
-                    </h1>
-                </div>
-
-
-
-                <div className="photos-home4">
-
-                    <div className="content-items">
-
-                        <img  onClick={()=>modal_init(true)} src="/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg" alt="" />
-
-                        <img src="/imgs/photos/audrey-grace-paul-JFelYZBGjjQ-unsplash.jpg" alt="" />
-
+                    <div className="photos_logo">
+                        <h1>Mushahary Family Photos</h1>
+                        <p>Here we want to share with you about our Photography. Photos captured and and uploaded by Mushahary Family.</p>
                     </div>
 
-                    <div className="content-items">
+                    <PhotosSearch />
 
-                        <img src="/imgs/photos/elon-musk-spacex-vogue-2015-ivvpnrdw3n9mz2sc.jpg" alt="" />
-
-                        <img src="/imgs/photos/elon-musk-tesla-motortrend-2019-925ssbgn380u4iky.jpg" alt="" />
-
-                        <img src="/imgs/photos/elon-musk-tesla-motortrend-2019-925ssbgn380u4iky.jpg" alt="" />
-
-
-                    </div>
-
-                    <div className="content-items">
-
-                        <img src="/imgs/photos/jc-gellidon-7KFVkL1cV0w-unsplash.jpg" alt="" />
-
-                        <img src="/imgs/photos/thisisengineering-raeng-w_zE6qlkQKA-unsplash.jpg" alt="" />
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            {/* Modal-box Start */}
-
-            {
-                modal_show? <div className="modal-box">
-
-
-                <div className="opacity"></div>
-
-
-
-                <div className="modal-container">
-
-                    <div className="modal-content1">
-
-                        <div className="title-box1">
-
-                            <div className="photos-title-here">
-
-                                <h1>
-                                    Photos Title Here
-                                </h1>
-                            </div>
-
-                            <div className="kokrajhar">
-
-                                <button>
-                                    Kokrajhar
-                                </button>
-                            </div>
-
+                    <div className="photos_lists">
+                        <div>
+                            <Link href="/photos/v2/photo_view">
+                                <img
+                                    src={"/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg"}
+                                />
+                            </Link>
+                            <Link href="">
+                                <img
+                                    src={"/imgs/photos/audrey-grace-paul-JFelYZBGjjQ-unsplash.jpg"}
+                                />
+                            </Link>
+                            <Link href="">
+                                <img
+                                    src={"/imgs/photos/elon-musk-spacex-vogue-2015-ivvpnrdw3n9mz2sc.jpg"}
+                                />
+                            </Link>
                         </div>
-
-                        <div className="title-box2">
-
-                            <i className="fa-sharp fa-solid fa-circle-xmark" onClick={()=>modal_init(false)}></i>
-
+                        <div>
+                            <Link href="">
+                                <img
+                                    src={"/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg"}
+                                />
+                            </Link>
+                            <Link href="">
+                                <img
+                                    src={"/imgs/photos/jc-gellidon-7KFVkL1cV0w-unsplash.jpg"}
+                                />
+                            </Link>
                         </div>
-
-                    </div>
-
-                    <div className="modal-content2">
-
-
-
-
-                        <div className="opacity-content">
-
-                            <div className="img">
-
-                                <img src="/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg" alt="" />
-
-
-
-                                <div className="paragraph">
-
-                                    <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, veniam! Atque aperiam temporibus quis molest
-                                    </p>
-                                </div>
-                            </div>
-
-
+                        <div>
+                            <Link href="">
+                                <img
+                                    src={"/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg"}
+                                />
+                            </Link>
+                            <Link href="">
+                                <img
+                                    src={"/imgs/photos/thisisengineering-raeng-w_zE6qlkQKA-unsplash.jpg"}
+                                />
+                            </Link>
                         </div>
-
                     </div>
 
                 </div>
-            </div>:null
-            }
-           
 
+                <Footer />
 
-
-
-            {/* Modal-Box  End */}
+            </main>
         </div>
-    );
+    )
 }
-
-export default photos;

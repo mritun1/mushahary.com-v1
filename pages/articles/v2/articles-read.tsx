@@ -1,220 +1,153 @@
-import { useRef, useState } from "react";
-import ArticlesHead from "../../../component/public/articles/ArticlesHead";
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import Footer from '../../../component/common/footer'
+import Header from '../../../component/common/header'
+import ArticlesCategory from '../../../component/public/articles/ArticlesCategory'
 
-
-
-const photos = () => {
-
-    const [modal_show, modal_init] = useState(false)
-
-
+export default function ArticlesRead() {
     return (
-        <div>
-            <div className="photos-home">
+        <div >
+            <Head>
+                <title> About - Mritunjoy Mushahary Personal website</title>
+                <meta name="description" content="About - Mritunjoy Mushahary Personal website" />
+                <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
+            </Head>
+            <main className='container'>
 
-                <ArticlesHead></ArticlesHead>
+                <Header />
 
-                <div className="photos-home2">
+                <div className="articles">
+                    <ArticlesCategory />
+                    <div className="contentWithRightBar">
+                        <div>
 
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-
-                    <a href="">
-                        <button>
-                            kokrajhar
-                        </button>
-                    </a>
-                </div>
-
-
-
-                {/* Navigation Bar End */}
-
-
-
-
-
-
-
-
-
-                {/* Articles-read Start */}
-
-
-                <div className="articles-read">
-
-
-                    <div className="public-read-content1">
-
-                        <div className="read-box1">
-
-                            <div className="read-box-content">
-
-                                <h1>
-                                    This is the title of Articles
-                                </h1>
+                            <div className="photos_logo">
+                                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, reiciendis!</h1>
                             </div>
 
-                            <div className="read-box-content-item">
+                            <ul className="cat">
+                                <li>
+                                    <Link href={""}>
+                                        <button>Nature</button>
+                                    </Link>
+                                </li>
+                                <li>
+                                    Date: 20 Jan 2022
+                                </li>
+                            </ul>
+
+                            <div className="article_img">
+                                <img src="/imgs/photos/elon-musk-spacex-vogue-2015-ivvpnrdw3n9mz2sc.jpg" alt="" />
+                            </div>
+
+                            <div className="description_txt">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam hic sequi corrupti ad illo, eum dolores magni molestias modi incidunt.
+                                </p>
+                            </div>
+
+                            <div className="article_content">
 
 
-                                <div className="read-box-content-item1">
+                                <h2>The tesd sdf sdfsdf sdf</h2>
+                                <ul>
+                                    <li>SDFSDF</li>
+                                    <li>SDFSDF</li>
+                                    <li>SDFSDF</li>
+                                    <li>SDFSDF</li>
+                                    <li>SDFSDF</li>
+                                    <li>SDFSDF</li>
+                                </ul>
 
-                                    <button>
-                                        golang
-                                    </button>
-
-                                </div>
-
-                                <div className="read-box-content-item2">
-
-
-
-                                    <p>
-                                        20 Jun 2021
-                                    </p>
-                                </div>
 
                             </div>
 
+
                         </div>
+                        <div>
+                            {/* RIGHT BAR */}
 
+                            
 
-                        <div className="read-box2"></div>
+                            <div className="article_small">
+                                <Link href={"/articles/v2/articles-read"}>
+                                    <div
+                                        className="img"
+                                        style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                    ></div>
+                                    <div className="txt">
+                                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h4>
+                                    </div>
+                                </Link>
+                            </div>
 
+                            <div className="article_small">
+                                <Link href={"/articles/v2/articles-read"}>
+                                    <div
+                                        className="img"
+                                        style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                    ></div>
+                                    <div className="txt">
+                                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h4>
+                                    </div>
+                                </Link>
+                            </div>
 
-                        <div className="read-box3">
+                            <div className="article_small">
+                                <Link href={"/articles/v2/articles-read"}>
+                                    <div
+                                        className="img"
+                                        style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                    ></div>
+                                    <div className="txt">
+                                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h4>
+                                    </div>
+                                </Link>
+                            </div>
 
-                            <h2>
-                                This is the title of the Articles
-                            </h2>
+                            <div className="article_small">
+                                <Link href={"/articles/v2/articles-read"}>
+                                    <div
+                                        className="img"
+                                        style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                    ></div>
+                                    <div className="txt">
+                                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h4>
+                                    </div>
+                                </Link>
+                            </div>
 
-                            <p>
-                                This is the Lorem ipsum dolor sit amet consectetur adipisicing elit. In, debitis laboriosam. Iusto.
-                            </p>
+                            <div className="article_small">
+                                <Link href={"/articles/v2/articles-read"}>
+                                    <div
+                                        className="img"
+                                        style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                    ></div>
+                                    <div className="txt">
+                                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h4>
+                                    </div>
+                                </Link>
+                            </div>
+
+                            <div className="article_small">
+                                <Link href={"/articles/v2/articles-read"}>
+                                    <div
+                                        className="img"
+                                        style={{ backgroundImage: `url("/imgs/photos/20160225173731-young-millionaire-sports-car-luxury-attire-businessman-rich-wealthy-lifestyle.jpeg")` }}
+                                    ></div>
+                                    <div className="txt">
+                                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla </h4>
+                                    </div>
+                                </Link>
+                            </div>
+
                         </div>
-
-
                     </div>
-
-
-                    <div 
-                    
-                    className="public-read-content2">
-
-
-                        <div className="public-read-content-box1">
-
-                            <h2>
-                                Related
-                            </h2>
-                        </div>
-
-                        <div className="public-read-content-box2">
-
-                            <div className="read-img1"></div>
-
-                            <div className="read-img2">
-
-                                <p>
-                                    This is the  title of the Articles
-                                </p>
-                            </div>
-
-                        </div>
-
-
-
-                        <div className="public-read-content-box2">
-
-                            <div className="read-img1"></div>
-
-                            <div className="read-img2">
-
-                                <p>
-                                    This is the  title of the Articles
-                                </p>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div className="public-read-content-box2">
-
-                            <div className="read-img1"></div>
-
-                            <div className="read-img2">
-
-                                <p>
-                                    This is the  title of the Articles
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
                 </div>
+                <Footer />
 
-
-
-                {/* Articles-read End */}
-
-            </div>
-
-
-
+            </main>
         </div>
-    );
+    )
 }
-
-export default photos;

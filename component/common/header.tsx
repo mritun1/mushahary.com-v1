@@ -14,7 +14,7 @@ const Header = () => {
                         </div>
                         <div className='logo_right'>
                             <h2>
-                                MRITUNJOY
+                                MUSHAHARY
                             </h2>
                         </div>
                     </div>
@@ -25,31 +25,31 @@ const Header = () => {
                             <li>
                                 <Link href="/" >
                                     <i className="fa-solid fa-file"></i>
-                                    Resume
+                                    Home
                                 </Link>
                             </li>
                             <li>
-                                <Link href="">
+                                <Link href="#">
                                     <i className="fa-solid fa-newspaper"></i>
-                                    Golang Articles
+                                    Services & Products
                                 </Link>
                                 <div className="dropdown">
                                     <p>
-                                        <Link href="/blog/for_loop">
+                                        <Link href="/photos/v2/photos">
                                             <i className="fa-solid fa-caret-right"></i>
-                                            For Loops Patterns
+                                            Photos
                                         </Link>
                                     </p>
                                     <p>
-                                        <Link href="">
+                                        <Link href="https://www.youtube.com/channel/UCAtGNXWv745_aJ1d6hUzIDw">
                                             <i className="fa-solid fa-caret-right"></i>
-                                            Data Structure
+                                            Videos
                                         </Link>
                                     </p>
                                     <p>
-                                        <Link href="">
+                                        <Link href="/articles/v2/articles-home">
                                             <i className="fa-solid fa-caret-right"></i>
-                                            Math Programs
+                                            Articles
                                         </Link>
                                     </p>
                                 </div>

@@ -1,10 +1,20 @@
+
 import Link from "next/link";
+import LogAuth from "../../../controllers/authentication/login";
 
 const AdminSidebar = () => {
-    return(
+
+    //LOGOUT FUNCTION
+    const logout = () => {
+        LogAuth.LogOut("/admin/login")
+    }
+
+    return (
         <>
             <div className="adminSidebar">
                 <div className="adminSideCont">
+
+                    
 
                     <ul>
                         <Link target={"_blank"} href="/">
@@ -16,10 +26,15 @@ const AdminSidebar = () => {
                         <Link href="/admin/articles">
                             <li><i className="fa-solid fa-newspaper"></i> Articles</li>
                         </Link>
+
+                        <span onClick={logout} style={{ color: `red`, cursor: `pointer` }}>
+                            <li ><i className="fa-solid fa-right-from-bracket"></i> Logout</li>
+                        </span>
+
                     </ul>
 
                 </div>
-            </div> 
+            </div>
         </>
     )
 }
