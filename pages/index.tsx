@@ -4,7 +4,8 @@ import Link from 'next/link'
 import Footer from '../component/common/footer'
 import Header from '../component/common/header'
 
-export default function Home() {
+function Home() {
+    
     return (
         <div >
             <Head>
@@ -30,7 +31,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="title">
-                            <h2>Our Team & Developer</h2>
+                            <h2>Our Team & Developer </h2>
                         </div>
                         <div className="column_dual">
                             <div>
@@ -125,3 +126,6 @@ export default function Home() {
         </div>
     )
 }
+
+export default Home
+

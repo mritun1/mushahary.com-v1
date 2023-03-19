@@ -29,7 +29,8 @@ export default function Login(){
         console.log(JSONdata)
 
         // API endpoint where we send form data.
-        const endpoint = 'http://localhost:8000/api/v1/admin/login'
+        // const endpoint = 'http://localhost:8000/api/v1/admin/login'
+        const endpoint = process.env.NEXT_PUBLIC_BACKEND_URL + '/api/v1/admin/login'
 
         // Form the request for sending data to the server.
         const options = {

@@ -2,13 +2,15 @@ import axios from "axios"
 import { getCookie } from "cookies-next";
 
 
-let Tokn = getCookie("LgTkn")
+let Tokn = getCookie(process.env.NEXT_PUBLIC_LOGIN_TOKEN_COOKIE_NAME as string)
+// let Tokn = getCookie("LgTkn")
 //const Bearer = 'Bearer ' + Tokn
 
 // const API_URL = "http://localhost:8000"
 //
 const API_URL = axios.create({
-    baseURL:"http://localhost:8000",
+    baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
+    // baseURL: "http://localhost:8000",
     headers:{
         'Content-Type': 'application/json',
         'Accept': 'application/json',
