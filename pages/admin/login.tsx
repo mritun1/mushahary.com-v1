@@ -1,5 +1,5 @@
 
-import { setCookie } from "cookies-next";
+import { hasCookie, setCookie } from "cookies-next";
 import { useRouter } from "next/router";
 import React from "react";
 import LogAuth from "../../controllers/authentication/login";
@@ -8,8 +8,7 @@ import LogAuth from "../../controllers/authentication/login";
 
 export default function Login(){
 
-    //REDIRECT WHEN LOGGED IN
-    LogAuth.LoggedIn("/admin/dash")
+    
 
     let router = useRouter()
 
@@ -52,8 +51,8 @@ export default function Login(){
         // If server returns the name submitted, that means the form works.
         const result = await response.json()
         
-        alert(`Token: ${result.token}`)
-        console.log(result.token)
+        //alert(`Token: ${result.token}`)
+        //console.log(result.token)
 
         setCookie("LgTkn", result.token)
 

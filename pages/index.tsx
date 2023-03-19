@@ -8,8 +8,8 @@ export default function Home() {
     return (
         <div >
             <Head>
-                <title>Mritunjoy Mushahary - Personal website</title>
-                <meta name="description" content="Mritunjoy Mushahary - Personal website" />
+                <title>Mushahary Family - Personal website</title>
+                <meta name="description" content="Mushahary Family is a personal website for Mritunjoy Mushahary" />
                 <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
             </Head>
             <main className='container'>
@@ -105,7 +105,7 @@ export default function Home() {
 
                             </div>
                             <div>
-                                <Link href="">
+                                <Link href="https://github.com/mritun1">
                                     <div style={{ backgroundImage: `url("imgs/homepage/book.png")` }} className="cons"></div>
                                     <div className="txt">
                                         <h4>Libraries</h4>

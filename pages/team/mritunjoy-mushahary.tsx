@@ -12,8 +12,8 @@ export default function Home(props: { allBlogs: []; }) {
     return (
         <div >
             <Head>
-                <title>Mritunjoy Mushahary - Personal website</title>
-                <meta name="description" content="Mritunjoy Mushahary - Personal website" />
+                <title>Mritunjoy Mushahary - Resume</title>
+                <meta name="description" content="Mritunjoy Mushahary - Resume" />
                 <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
             </Head>
 

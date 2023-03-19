@@ -26,6 +26,9 @@ const AdminSidebar = () => {
                         <Link href="/admin/articles">
                             <li><i className="fa-solid fa-newspaper"></i> Articles</li>
                         </Link>
+                        <Link href="/admin/photos/dash">
+                            <li><i className="fa-solid fa-photo-film"></i>  Photos</li>
+                        </Link>
 
                         <span onClick={logout} style={{ color: `red`, cursor: `pointer` }}>
                             <li ><i className="fa-solid fa-right-from-bracket"></i> Logout</li>

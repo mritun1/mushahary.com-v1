@@ -8,6 +8,7 @@ import { ContentState, convertFromRaw, convertToRaw, EditorState } from "draft-j
 import AdminHead from "../../../component/admin/common/AdminHead";
 import Login from "../../../controllers/authentication/login";
 import API_URL from "../../../controllers/backend/api_url";
+import { hasCookie } from "cookies-next";
 
 
 
@@ -26,8 +27,7 @@ const editArticleD = () => {
         }
     );
 
-    //LOGIN AUTHENTICATION
-    Login.LoginAuthentication("/admin/login")
+
 
     //GET ALL THE LISTS OF ARTICLE CATEGORIES
     const [catList, setCatList] = useState([])
@@ -65,13 +65,23 @@ const editArticleD = () => {
 
     };
 
+    const [filePhoto, setFile] = useState("");
+    const handleFileChange = (event: any) => {
+        setFile(event.target.files[0]);
+    };
+
     const handleSubmit = (event: any) => {
         event.preventDefault();
         API_URL.post('/api/v1/articles/create', {
             category_id: selectedOption,
             title: formData.title,
-            description: formData.description,
+            des: formData.description,
             content: convertedContent,
+            photo_file: filePhoto,
+        },{
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
         })
             .then((response) => {
                 console.log(response.data);
@@ -107,63 +117,71 @@ const editArticleD = () => {
                             </h2>
                         </div>
 
-                        <div className="contTable">
+                        <form onSubmit={handleSubmit}>
+                            <div className="contTable">
 
-                            <table className="editTable">
-                                <thead>
-                                    <tr>
-                                        <td>
-                                            <h2>Write your Article</h2>
-                                        </td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <h6>Article Category</h6>
-                                            <select value={selectedOption} onChange={handleSelectChange} name="category" id="category">
-                                                <option value="" disabled>Select Category</option>
-                                                {catList.map(cats => {
-                                                    const { ID, CATEGORY_NAME } = cats
-                                                    return <option key={ID} value={ID}>{CATEGORY_NAME}</option>
-                                                })}
+                                <table className="editTable">
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <h2>Write your Article</h2>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h6>Article Category</h6>
+                                                <select value={selectedOption} onChange={handleSelectChange} name="category" id="category">
+                                                    <option >SELECT CATEGORY</option>
+                                                    {catList.map(cats => {
+                                                        const { ID, CATEGORY_NAME } = cats
+                                                        return <option key={ID} value={ID}>{CATEGORY_NAME}</option>
+                                                    })}
 
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h6>Article Title</h6>
-                                            <input value={formData.title} onChange={handleInputChange} type="text" name="title" id="title" placeholder="Article Title" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h6>Article Description</h6>
-                                            <textarea value={formData.description} onChange={handleInputChange} name="description" id="description" rows={3} placeholder="Write Article Description"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h6>Article Content</h6>
-                                            <Editor
-                                                editorState={editorState}
-                                                onEditorStateChange={setEditorState}
-                                                toolbarClassName="editor-toolbar-class"
-                                                editorClassName="editor-cont-class"
-                                            />
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Article Thumbnail</h6>
+                                                <input type="file" name="thumbnail" id="thumbnail" onChange={handleFileChange} />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Article Title</h6>
+                                                <input value={formData.title} onChange={handleInputChange} type="text" name="title" id="title" placeholder="Article Title" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Article Description</h6>
+                                                <textarea value={formData.description} onChange={handleInputChange} name="description" id="description" rows={3} placeholder="Write Article Description"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Article Content</h6>
+                                                <Editor
+                                                    editorState={editorState}
+                                                    onEditorStateChange={setEditorState}
+                                                    toolbarClassName="editor-toolbar-class"
+                                                    editorClassName="editor-cont-class"
+                                                />
 
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button onClick={handleSubmit} className="rt-submit"><i className="fa-sharp fa-solid fa-paper-plane"></i> Submit</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button className="rt-submit"><i className="fa-sharp fa-solid fa-paper-plane"></i> Submit</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                        </div>
+                            </div>
+                        </form>
 
                     </div>
                 </div>

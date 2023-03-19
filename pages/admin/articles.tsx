@@ -4,13 +4,12 @@ import AdminHead from "../../component/admin/common/AdminHead";
 import Login from "../../controllers/authentication/login";
 import { useEffect, useState } from "react";
 import API_URL from "../../controllers/backend/api_url";
+import { hasCookie } from "cookies-next";
 
 const articles = () => {
 
-    let articleSL = 0;
-
-    //LOGIN AUTHENTICATION
-    Login.LoginAuthentication("/admin/login")
+   
+        
 
     const [articleList,setArticleList] = useState([])
     let [pagNum,setPagNum] = useState(1)
@@ -18,22 +17,29 @@ const articles = () => {
     var offset = 0
     const getArticleLists = async (o:any,l:any) => {
         try {
-            const res = await API_URL.get("/api/v1/articles/getAll/" + o + "/" + l)
-            setArticleList(res.data.data)
-            const pagNumNew = parseInt(res.data.total) / limit
-            setPagNum(pagNumNew)
+            const res = await API_URL.get("/api/v1/articles/only_admin/" + o + "/" + l)
+            
+            if (res.data.status == 200){
+                setArticleList(res.data.data)
+                const pagNumNew = parseInt(res.data.total) / limit
+                setPagNum(pagNumNew)
+            }else{
+                window.location.href = "/"
+            }
         } catch (error) {
             console.log(error)
         }
     }
 
     //PAGINATION START
+    let newlimit = 0
     function articlePag(e:any) {
-        let newlimit = e.target.getAttribute("pag-attr") * limit
+        newlimit = e.target.getAttribute("pag-attr") * limit
         if (newlimit>limit){
             offset = newlimit - limit
         }
         getArticleLists(offset,limit)
+        
     }
     let pagBtns = []
     let btnNum = 0
@@ -42,6 +48,21 @@ const articles = () => {
         pagBtns.push(<button key={btnNum} onClick={articlePag} pag-attr={btnNum}>{btnNum}</button>)
     }
     //PAGINATION END
+
+    function deleteArticle(id:number){
+        const confirmed = window.confirm("Are you sure to Delete?")
+        if(confirmed){
+            const del = async () => {
+                const res = await API_URL.delete("/api/v1/articles/delete/" + id)
+                //console.log(res.data)
+                
+                if(res.data.status == 200){
+                    getArticleLists(offset, limit)
+                }
+            }
+            del()
+        }
+    }
 
     useEffect(()=>{
         getArticleLists(offset,limit)
@@ -72,16 +93,18 @@ const articles = () => {
                                 <thead>
                                     <tr>
                                         <td>SL</td>
-                                        <td colSpan={2}>Article Title</td>
+                                        <td colSpan={3}>Article Title</td>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {articleList.map(post=>{
-                                        const {ID,TITLE,CATEGORY_NAME} = post
-                                        articleSL++
+                                    {articleList?(articleList.map(post=>{
+                                        const {SL,ID,TITLE,CATEGORY_NAME,THUMBNAIL} = post
                                         return <tr key={ID}>
-                                                <td>{articleSL}</td>
-                                                <td>{TITLE} {ID}</td>
+                                                <td>{SL}</td>
+                                                <td>
+                                                    <img src={THUMBNAIL} style={{height:`100px`,width:`auto`}} />
+                                                </td>
+                                                <td>{TITLE}</td>
                                                 <td>
                                                     <h3>{CATEGORY_NAME}</h3>
                                                     <Link target={"_blank"} href="">
@@ -90,10 +113,10 @@ const articles = () => {
                                                     <Link href={"/admin/edit-article-d/" + ID}>
                                                         <button><i className="fa-solid fa-pen-to-square"></i> Edit</button>
                                                     </Link>
-                                                    <button><i className="fa-solid fa-trash"></i> Delete</button>
+                                                <button onClick={() => deleteArticle(ID)}><i className="fa-solid fa-trash"></i> Delete</button>
                                                 </td>
                                             </tr>
-                                    })}
+                                    })):(<p>Sorry! No content Found</p>)}
                                     
                                 </tbody>
                             </table>

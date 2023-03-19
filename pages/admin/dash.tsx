@@ -7,9 +7,6 @@ import API_URL from "../../controllers/backend/api_url";
 
 const dash = () => {
 
-    //LOGIN AUTHENTICATION
-    Login.LoginAuthentication("/admin/login")
-
     const [myData,setMyData] = useState({
         id : "",
         name : "",
@@ -20,17 +17,21 @@ const dash = () => {
         try{
             // const res = await API_URL.get("/api/v1/articles/cat")
             const res = await API_URL.get("/api/v1/admin/dash")
-            setMyData({
-                id: res.data.Id,
-                  name: res.data.Name,
-                  status: res.data.Status,
-                })
+            
+            if (res.data.status == 200) {
+                setMyData({
+                    id: res.data.Id,
+                    name: res.data.Name,
+                    status: res.data.Status,
+                    })
+                }
             //console.log(res.data)
         }catch (error){
             console.log(error)
         }
     }
     useEffect(()=>{
+        
         getApiData()
     },[])
     

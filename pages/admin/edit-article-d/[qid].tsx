@@ -1,14 +1,17 @@
 import AdminSidebar from "../../../component/admin/common/AdminSidebar";
 import Link from "next/link";
-import { convertToHTML } from 'draft-convert';
+import { convertFromHTML, convertToHTML } from 'draft-convert';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import dynamic from "next/dynamic";
-import { SetStateAction, useEffect, useState } from "react";
+import { HtmlHTMLAttributes, SetStateAction, useEffect, useRef, useState } from "react";
 import { ContentState, convertFromRaw, convertToRaw, EditorState } from "draft-js";
 import AdminHead from "../../../component/admin/common/AdminHead";
 import Login from "../../../controllers/authentication/login";
 import API_URL from "../../../controllers/backend/api_url";
 import { useRouter } from "next/router";
+import { pid } from "process";
+import { HtmlContext } from "next/dist/shared/lib/html-context";
+import { hasCookie } from "cookies-next";
 
 
 
@@ -18,11 +21,13 @@ const Editarticle = () => {
     const router = useRouter()
     let { qid } =  router.query
 
+
     //GETTING THE EDITING CONTENT - START
     const [convertedContent, setConvertedContent] = useState(null);
     const [formData, setFormData] = useState({
         title: '',
         description: '',
+        id: '',
     });
     
     const getEditData = async () => {
@@ -32,12 +37,14 @@ const Editarticle = () => {
                 setFormData(prevState => ({
                     ...prevState,
                     title: res.data.data.TITLE,
-                    description: res.data.data.DESCRIPTION,
+                    description: res.data.data.DES,
+                    id: res.data.data.ID
                 }))
 
             }
             
-            const ct = ContentState.createFromText(res.data.data.CONTENT)
+            const htmlString = String(res.data.data.CONTENT);
+            const ct = convertFromHTML(htmlString);
             setEditorState(() => EditorState.createWithContent(ct))
             
         } catch (error) {
@@ -53,8 +60,7 @@ const Editarticle = () => {
         }
     );
 
-    //LOGIN AUTHENTICATION
-    Login.LoginAuthentication("/admin/login")
+   
 
     //GET ALL THE LISTS OF ARTICLE CATEGORIES
     const [catList, setCatList] = useState([])
@@ -79,6 +85,7 @@ const Editarticle = () => {
     useEffect(() => {
         getEditData();
         getCatList();
+
     }, []);
 
 
@@ -96,15 +103,20 @@ const Editarticle = () => {
         setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
 
     };
-
+   
+    
     const handleSubmit = (event: any) => {
         event.preventDefault();
+        
+        
+
         API_URL.put('/api/v1/articles/edit', {
             category_id: selectedOption,
             title: formData.title,
-            description: formData.description,
+            des: formData.description,
             content: convertedContent,
-            id: qid,
+            id: formData.id,
+            thumbnail: "",
         })
             .then((response) => {
                 console.log(response.data);
@@ -119,6 +131,12 @@ const Editarticle = () => {
             });
     };
     //FORM SUBMIT END
+
+    // function selectedOutput(catID:any){
+    //     if(catID == 7){
+    //         return "selected"
+    //     }
+    // }
 
     return (
         <div>
@@ -140,8 +158,8 @@ const Editarticle = () => {
                             </h2>
                         </div>
 
+                        <form onSubmit={handleSubmit}>
                         <div className="contTable">
-
                             <table className="editTable">
                                 <thead>
                                     <tr>
@@ -155,15 +173,21 @@ const Editarticle = () => {
                                         <td>
                                             <h6>Article Category</h6>
                                             <select value={selectedOption} onChange={handleSelectChange} name="category" id="category">
-                                                <option value="" disabled>Select Category</option>
+                                                <option >SELECT CATEGORY</option>
                                                 {catList.map(cats => {
                                                     const { ID, CATEGORY_NAME } = cats
-                                                    return <option key={ID} value={ID}>{CATEGORY_NAME}</option>
+                                                    return <option  key={ID} value={ID}>{CATEGORY_NAME}</option>
                                                 })}
 
                                             </select>
                                         </td>
                                     </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Article Thumbnail</h6>
+                                                <img src="https://i.ytimg.com/vi/Iq2qT0fRhAA/maxresdefault.jpg" style={{height:`200px`,width:`auto`}} alt="" />
+                                            </td>
+                                        </tr>
                                     <tr>
                                         <td>
                                             <h6>Article Title</h6>
@@ -190,13 +214,14 @@ const Editarticle = () => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <button onClick={handleSubmit} className="rt-submit"><i className="fa-sharp fa-solid fa-paper-plane"></i> Submit</button>
+                                            <button className="rt-submit"><i className="fa-sharp fa-solid fa-paper-plane"></i> Submit</button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
 
                         </div>
+                        </form>
 
                     </div>
                 </div>
@@ -211,4 +236,12 @@ export default Editarticle;
 
 
 
+
+function htmlToDraft(html: any) {
+    throw new Error("Function not implemented.");
+}
+
+function stateFromHTML(html: any) {
+    throw new Error("Function not implemented.");
+}
 

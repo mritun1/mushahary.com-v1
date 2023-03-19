@@ -30,6 +30,21 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link href="#">
+                                    <i className="fa-solid fa-people-group"></i>
+                                    Team
+                                </Link>
+                                <div className="dropdown">
+                                    <p>
+                                        <Link href="/team/mritunjoy-mushahary">
+                                            <i className="fa-solid fa-caret-right"></i>
+                                            Mritunjoy Mushahary
+                                        </Link>
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <Link href="#">
                                     <i className="fa-solid fa-newspaper"></i>
                                     Services & Products
                                 </Link>
@@ -47,7 +62,7 @@ const Header = () => {
                                         </Link>
                                     </p>
                                     <p>
-                                        <Link href="/articles/v2/articles-home">
+                                        <Link href="/articles/v2">
                                             <i className="fa-solid fa-caret-right"></i>
                                             Articles
                                         </Link>

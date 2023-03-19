@@ -1,14 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import Footer from '../../../component/common/footer'
-import Header from '../../../component/common/header'
-import PhotosCategory from '../../../component/public/photos/PhotosCategory'
-import PhotosSearch from '../../../component/public/photos/PhotosSearch'
-import API_URL from '../../../controllers/backend/api_url'
+import Footer from '../../../../../component/common/footer'
+import Header from '../../../../../component/common/header'
+import PhotosCategory from '../../../../../component/public/photos/PhotosCategory'
+import PhotosSearch from '../../../../../component/public/photos/PhotosSearch'
+import API_URL from '../../../../../controllers/backend/api_url'
 
-export default function Photos() {
+function CatPhotos() {
+
+    //GET THE EDIT QUERY
+    const router = useRouter()
+    let { id,cat } = router.query
+    console.log(id)
+    let title = String(cat).replaceAll("%20"," ")
 
     const [photosList, setPhotosList] = useState([])
     let [pagNum, setPagNum] = useState(1)
@@ -16,17 +23,17 @@ export default function Photos() {
     var offset = 0
     const getArticleLists = async (o: any, l: any) => {
         try {
-            const res = await API_URL.get("/api/v1/photos/getAll/" + o + "/" + l)
+            const res = await API_URL.get("/api/v1/photos/getPhotosByCat/" + o + "/" + l+"/"+id)
             setPhotosList(res.data.data)
             const pagNumNew = parseInt(res.data.total) / limit
             setPagNum(pagNumNew)
-            
+
         } catch (error) {
             console.log(error)
         }
     }
 
-    
+
 
     //PAGINATION START
     let newlimit = 0
@@ -48,7 +55,7 @@ export default function Photos() {
 
     useEffect(() => {
         getArticleLists(offset, limit)
-        
+
     }, [])
 
     var gal1 = 1
@@ -58,8 +65,8 @@ export default function Photos() {
     return (
         <div >
             <Head>
-                <title>Photos - Mushahary Family Personal Photos</title>
-                <meta name="description" content="Photos - Mushahary Family Personal Photos" />
+                <title>Photos Cat - {title}</title>
+                <meta name="description" content={"Photos - "+title} />
                 <link rel="icon" type="image/png" href="/../imgs/icons/profile.jpg" />
             </Head>
             <main className='container'>
@@ -71,8 +78,7 @@ export default function Photos() {
                     <PhotosCategory />
 
                     <div className="photos_logo">
-                        <h1>Mushahary Family Photos</h1>
-                        <p>Here we want to share with you about our Photography. Photos captured and and uploaded by Mushahary Family.</p>
+                        <h1>Photo Cat: {title}</h1>
                     </div>
 
                     <PhotosSearch />
@@ -81,36 +87,36 @@ export default function Photos() {
 
 
                         <div>
-                            {photosList?(photosList.map(post => {
+                            {photosList ? (photosList.map(post => {
                                 const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_FILE, PHOTO_DES } = post
                                 if (SL == gal1) {
                                     gal1 = gal1 + 3
-                                    return <Link key={ID} href={"/photos/v2/" + ID +"/"+ PHOTO_TITLE}>
+                                    return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
                                         <img
                                             src={PHOTO_FILE}
                                         />
                                     </Link>
-                                    
+
                                 }
-                                
-                            })):(<h3>Not Found</h3>)}
-                            
+
+                            })) : (<h3>Not Found</h3>)}
+
                         </div>
                         <div>
                             {photosList ? (photosList.map(post => {
                                 const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_FILE, PHOTO_DES } = post
                                 if (SL == gal2) {
                                     gal2 = gal2 + 3
-                                    return <Link key={ID} href={"/photos/v2/" + ID + "/" +PHOTO_TITLE}>
+                                    return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
                                         <img
                                             src={PHOTO_FILE}
                                         />
                                     </Link>
-                                    
+
                                 }
-                                
-                            })) : (<h3>Not Found</h3>) }
-                            
+
+                            })) : (<h3>Not Found</h3>)}
+
                         </div>
                         <div>
                             {photosList ? (photosList.map(post => {
@@ -121,11 +127,11 @@ export default function Photos() {
                                         <img
                                             src={PHOTO_FILE}
                                         />
-                                    </Link>  
+                                    </Link>
                                 }
-                                
-                            })) : (<h3>Not Found</h3>) }
-                                
+
+                            })) : (<h3>Not Found</h3>)}
+
                         </div>
                     </div>
 
@@ -137,3 +143,16 @@ export default function Photos() {
         </div>
     )
 }
+export async function getServerSideProps(context: { params: any }) {
+    const { params } = context;
+    const { id,cat } = params;
+
+    return {
+        props: {
+            cat,
+            id,
+        },
+    };
+}
+
+export default CatPhotos
