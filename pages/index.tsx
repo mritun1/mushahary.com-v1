@@ -37,7 +37,7 @@ function Home() {
                             <div>
                                 <Link href="/team/mritunjoy-mushahary">
                                     <div>
-                                        <div></div>
+                                        <div style={{ backgroundImage: `url(/imgs/icons/profile.jpg)` }}></div>
                                         <h3>Mritunjoy Mushahary</h3>
                                         <p>Software Developer</p>
                                     </div>
@@ -46,7 +46,7 @@ function Home() {
                             <div>
                                 <Link href="">
                                     <div>
-                                        <div></div>
+                                        <div style={{ backgroundImage:`url(/imgs/icons/pritom.jpg)`}}></div>
                                         <h3>Pritom Mushahary</h3>
                                         <p>Software Developer</p>
                                     </div>
@@ -77,7 +77,7 @@ function Home() {
                                 </Link>
                             </div>
                             <div>
-                                <Link href="/articles/v2/articles-home">
+                                <Link href="/articles/v2">
                                     <div style={{ backgroundImage: `url("imgs/homepage/articles.png")` }} className="cons"></div>
                                     <div className="txt">
                                         <h4>Articles</h4>
@@ -106,7 +106,7 @@ function Home() {
 
                             </div>
                             <div>
-                                <Link href="https://github.com/mritun1">
+                                <Link href="https://github.com/mritun1?tab=repositories">
                                     <div style={{ backgroundImage: `url("imgs/homepage/book.png")` }} className="cons"></div>
                                     <div className="txt">
                                         <h4>Libraries</h4>
