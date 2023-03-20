@@ -1,7 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import Link from "next/link"
 
 const Header = () => {
+    const [mobileMenuStatus,setMobileMenuStatus] = useState(false)
+    function mobileMenuHandle(){
+        setMobileMenuStatus(!mobileMenuStatus)
+    }
     return (
         <>
             <div className="header">
@@ -20,8 +24,76 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="rightMenu">
-                    <div>
-                        <ul>
+                    <div className="rightMenuMobile">
+                        <button onClick={mobileMenuHandle}>MENU</button>
+                        {mobileMenuStatus ? (<div className="rightMenuMobileDropDown">
+                            <ul>
+                                <a href="/">
+                                    <li><i className="fa-solid fa-file"></i> Home</li>
+                                </a>
+                                <li>
+                                    <p><i className="fa-solid fa-people-group"></i> Team</p>
+                                    <ul>
+                                        <a href="/team/mritunjoy-mushahary">
+                                            <li>
+                                                <i className="fa-solid fa-caret-right"></i>
+                                                Mritunjoy Mushahary
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><i className="fa-solid fa-newspaper"></i> Services & Products</p>
+                                    <ul>
+                                        <a href="/photos/v2/photos">
+                                            <li>
+                                                <i className="fa-solid fa-caret-right"></i>
+                                                Photos
+                                            </li>
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UCAtGNXWv745_aJ1d6hUzIDw">
+                                            <li>
+                                                <i className="fa-solid fa-caret-right"></i>
+                                                Youtube Videos
+                                            </li>
+                                        </a>
+                                        <a href="/articles/v2">
+                                            <li>
+                                                <i className="fa-solid fa-caret-right"></i>
+                                                Articles
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><i className="fa-solid fa-circle-chevron-down"></i> Others</p>
+                                    <ul>
+                                        <a href="/contact">
+                                            <li>
+                                                <i className="fa-solid fa-caret-right"></i>
+                                                Contact
+                                            </li>
+                                        </a>
+                                        <a href="/terms">
+                                            <li>
+                                                <i className="fa-solid fa-caret-right"></i>
+                                                Terms&Conditions
+                                            </li>
+                                        </a>
+                                        <a href="/about">
+                                            <li>
+                                                <i className="fa-solid fa-caret-right"></i>
+                                                About us
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>):("")}
+                        
+                    </div>
+                    <div className="rightMenuDesktopMenu">
+                        <ul className="rightMenuDesktopUl">
                             <li>
                                 <Link href="/" >
                                     <i className="fa-solid fa-file"></i>
@@ -58,7 +130,7 @@ const Header = () => {
                                     <p>
                                         <Link href="https://www.youtube.com/channel/UCAtGNXWv745_aJ1d6hUzIDw">
                                             <i className="fa-solid fa-caret-right"></i>
-                                            Videos
+                                            Youtube Videos
                                         </Link>
                                     </p>
                                     <p>
@@ -68,7 +140,7 @@ const Header = () => {
                                         </Link>
                                     </p>
                                 </div>
-                            </li>                            
+                            </li>
                             <li>
                                 <Link href="#">
                                     <i className="fa-solid fa-circle-chevron-down"></i>

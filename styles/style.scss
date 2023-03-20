@@ -45,8 +45,8 @@ a {
 
 .leftMenu {
     height: 70px;
-    flex: 2;
-
+   // flex: 2;
+//border: 1px solid red;
     .logo {
         display: flex;
         width: 210px;
@@ -76,12 +76,12 @@ a {
 
 .rightMenu {
     height: 70px;
-    flex: 2;
+    flex: 8;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
 
-    ul {
+    .rightMenuDesktopUl {
         list-style-type: none;
 
         li {
@@ -1049,6 +1049,70 @@ margin-left: 3px;
     margin:6px;
 }
 
-.photo_search_cont{
+.rightMenuDesktopMenu{
+    @media screen and (max-width:692px) {
+        display: none;
+    }
+}
+@mixin mobileRightMenuLink(){
+    &>a {
+            text-decoration: none;
+            color: #173D89;
+            //font-weight: bold;
+        }
     
+        &>a>li {
+            padding: 6px;
+    
+            &:hover {
+                background-color: gray;
+            }
+        }
+}
+.rightMenuMobile{
+    @media screen and (min-width:692px) {
+            display: none;
+        }
+        padding-right: 20px;
+        &>button{
+            font-weight: bold;
+            border: none;
+            background-color: #64B86D;
+            padding: 6px 10px;
+            color:#CFE3D2;
+            border-radius: 6px;
+            box-shadow: 0px 2px 3px #64B86D;
+            &:hover{
+                background-color: #416b45;
+            }
+        }
+                position: relative;
+        &>.rightMenuMobileDropDown {
+            //border: 1px solid red;
+            background-color: #D1E0D0;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            //display: none;
+            padding: 0px 16px;
+            border-radius: 6px;
+            box-shadow: 0px 3px 1px lightgray;
+            width: 240px;
+            &>ul{
+                padding-left: 0px;
+                list-style-type: none;
+                @include mobileRightMenuLink();
+                &>li>p{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    //border: 1px solid red;
+                    color: gray;
+                }
+                &>li>ul{
+                    list-style-type: none;
+                    padding-left: 16px;
+                    @include mobileRightMenuLink()
+                }
+            }
+        }
 }
