@@ -12,7 +12,7 @@ import { hasCookie } from "cookies-next";
 
 
 
-const editArticleD = () => {
+const EditArticleD = () => {
 
     const [convertedContent, setConvertedContent] = useState(null);
     const [formData, setFormData] = useState({
@@ -192,7 +192,7 @@ const editArticleD = () => {
     );
 }
 
-export default editArticleD;
+export default EditArticleD;
 
 
 

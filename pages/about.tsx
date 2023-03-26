@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Footer from '../component/common/footer'
-import Header from '../component/common/header'
+import Footer from '../component/common/Footer'
+import Header from '../component/common/Header'
 
 export default function About() {
     return (

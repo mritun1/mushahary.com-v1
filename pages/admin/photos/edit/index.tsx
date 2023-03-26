@@ -4,7 +4,7 @@ import AdminHead from "../../../../component/admin/common/AdminHead";
 import { useEffect, useState } from "react";
 import API_URL from "../../../../controllers/backend/api_url";
 
-const createPhoto = () => {
+const CreatePhoto = () => {
 
     const [inputData, setFormData] = useState({
         title: '',
@@ -128,4 +128,4 @@ const createPhoto = () => {
     );
 }
 
-export default createPhoto;
+export default CreatePhoto;

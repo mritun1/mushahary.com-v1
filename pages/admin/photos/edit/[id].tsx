@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import API_URL from "../../../../controllers/backend/api_url";
 import { useRouter } from "next/router";
 
-const editPhoto = () => {
+const EditPhoto = () => {
 
     //GET THE EDIT QUERY
     const router = useRouter()
@@ -156,4 +156,4 @@ export async function getServerSideProps(context: { params: any }) {
     };
 }
 
-export default editPhoto;
+export default EditPhoto;

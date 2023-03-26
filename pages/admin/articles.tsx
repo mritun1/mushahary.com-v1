@@ -1,12 +1,10 @@
 import AdminSidebar from "../../component/admin/common/AdminSidebar";
 import Link from "next/link";
 import AdminHead from "../../component/admin/common/AdminHead";
-import Login from "../../controllers/authentication/login";
 import { useEffect, useState } from "react";
 import API_URL from "../../controllers/backend/api_url";
-import { hasCookie } from "cookies-next";
 
-const articles = () => {
+const Articles = () => {
 
    
         
@@ -134,4 +132,4 @@ const articles = () => {
     );
 }
 
-export default articles;
+export default Articles;

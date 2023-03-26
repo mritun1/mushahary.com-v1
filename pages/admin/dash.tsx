@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Login from "../../controllers/authentication/login";
 import API_URL from "../../controllers/backend/api_url";
 
-const dash = () => {
+const Dash = () => {
 
     const [myData,setMyData] = useState({
         id : "",
@@ -62,4 +62,4 @@ const dash = () => {
     );
 }
 
-export default dash;
+export default Dash;
