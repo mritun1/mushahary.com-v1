@@ -84,9 +84,9 @@ const PhotosDash = () => {
                             <div className="admin_photo_dash_photoList">
 
                                 {photosList ? (photosList.map(post => {
-                                    const {  ID, PHOTO_TITLE, PHOTO_DES, PHOTO_FILE } = post
+                                    const {  ID, PHOTO_TITLE, PHOTO_DES, PHOTO_URL } = post
                                     return <div key={ID} className="admin_photo_dash_photoList_photoSec">
-                                        <div style={{ backgroundImage: `url(${PHOTO_FILE})`}}></div>
+                                        <div style={{ backgroundImage: `url(${PHOTO_URL})`}}></div>
                                         <div>
                                             <div>
                                                 <h4>{PHOTO_TITLE}</h4>

@@ -78,12 +78,12 @@ function ArticleSearch() {
                     <div className="articles_columns">
 
                         {articleList?(articleList.map(post => {
-                            const { SL, ID, TITLE, CATEGORY_NAME, THUMBNAIL, DES } = post
+                            const { SL, ID, TITLE, CATEGORY_NAME, PHOTO_URL, DES } = post
                             return <div key={ID}>
                                 <Link href={"/articles/v2/" + ID + "/" + TITLE}>
                                     <div
                                         className="img"
-                                        style={{ backgroundImage: `url(` + THUMBNAIL + `)` }}
+                                        style={{ backgroundImage: `url(` + PHOTO_URL + `)` }}
                                     ></div>
                                     <div className="txt">
                                         <h3>{TITLE}</h3>

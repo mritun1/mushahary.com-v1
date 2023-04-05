@@ -91,12 +91,12 @@ function SearchPhoto() {
 
                         <div>
                             {photosList ? (photosList.map(post => {
-                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_FILE, PHOTO_DES } = post
+                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
                                 if (SL == gal1) {
                                     gal1 = gal1 + 3
                                     return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
                                         <img
-                                            src={PHOTO_FILE}
+                                            src={PHOTO_URL}
                                         />
                                     </Link>
 
@@ -107,12 +107,12 @@ function SearchPhoto() {
                         </div>
                         <div>
                             {photosList ? (photosList.map(post => {
-                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_FILE, PHOTO_DES } = post
+                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
                                 if (SL == gal2) {
                                     gal2 = gal2 + 3
                                     return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
                                         <img
-                                            src={PHOTO_FILE}
+                                            src={PHOTO_URL}
                                         />
                                     </Link>
 
@@ -123,12 +123,12 @@ function SearchPhoto() {
                         </div>
                         <div>
                             {photosList ? (photosList.map(post => {
-                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_FILE, PHOTO_DES } = post
+                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
                                 if (SL == gal3) {
                                     gal3 = gal3 + 3
                                     return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
                                         <img
-                                            src={PHOTO_FILE}
+                                            src={PHOTO_URL}
                                         />
                                     </Link>
                                 }

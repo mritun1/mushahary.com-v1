@@ -21,7 +21,8 @@ function Photo_view() {
         id: '',
         category_name: '',
         date: '',
-        photoFile:'',
+        photoFile: '',
+        photo_url: '',
     });
 
     const getEditData = async () => {
@@ -48,6 +49,7 @@ function Photo_view() {
                     category_name: res.data.data.CATEGORY_NAME,
                     date: formattedDate,
                     photoFile: res.data.data.PHOTO_FILE,
+                    photo_url: res.data.data.PHOTO_URL,
                 }))
 
                 //Related Photos
@@ -107,7 +109,7 @@ function Photo_view() {
                                 Date: {formData.date}
                             </li>
                         </ul>
-                        <img src={formData.photoFile} alt="" />
+                        <img src={formData.photo_url} alt="" />
                         <div className="photo_des">
                             <p>{formData.description}</p>
                         </div>
@@ -119,9 +121,9 @@ function Photo_view() {
                     
                     <div className="related_photos">
                         {relatedPhotos ? (relatedPhotos.map(photos=>{
-                            const { ID, PHOTO_TITLE, PHOTO_FILE } = photos
+                            const { ID, PHOTO_TITLE, PHOTO_URL } = photos
                             return <a key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
-                                <img src={PHOTO_FILE} alt="" />
+                                <img src={PHOTO_URL} alt="" />
                             </a>
                         })):(<p>No content Found!</p>)}
 

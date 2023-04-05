@@ -28,6 +28,7 @@ function ArticlesRead() {
         category_name: '',
         date: '',
         thumbnail: '',
+        photo_url: '',
     });
 
 
@@ -57,6 +58,7 @@ function ArticlesRead() {
                     category_name: res.data.data.CATEGORY_NAME,
                     date: formattedDate,
                     thumbnail: res.data.data.THUMBNAIL,
+                    photo_url: res.data.data.PHOTO_URL,
                 }))
                 //Related ARTICLES
                 getRelatedArticles(res.data.data.CATEGORY_ID,10)
@@ -118,7 +120,7 @@ function ArticlesRead() {
 
                             <div className="article_img">
 
-                                <img src={formData.thumbnail} alt="" />
+                                <img src={formData.photo_url} alt="" />
                             </div>
 
                             <div className="description_txt">
@@ -142,12 +144,12 @@ function ArticlesRead() {
                             {/* RIGHT BAR */}
                             
                             {relatedArticles ? (relatedArticles.map(post => {
-                                const { ID, TITLE, DESCRIPTION,THUMBNAIL } = post
+                                const { ID, TITLE, DESCRIPTION,PHOTO_URL } = post
                                 return <div key={ID} className="article_small">
                                     <a href={"/articles/v2/"+ID+"/"+TITLE}>
                                         <div
                                             className="img"
-                                            style={{ backgroundImage: `url("`+THUMBNAIL+`")` }}
+                                            style={{ backgroundImage: `url("` + PHOTO_URL +`")` }}
                                         ></div>
                                         <div className="txt">
                                             <h4>{TITLE}</h4>

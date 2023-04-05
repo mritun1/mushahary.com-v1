@@ -29,7 +29,7 @@ const EditPhoto = () => {
                     description: res.data.data.PHOTO_DES,
                     id: res.data.data.ID,
                     photoFile: res.data.data.PHOTO_FILE,
-                    photo_url: res.data.data.photo_url,
+                    photo_url: res.data.data.PHOTO_URL,
                 }))
 
             }

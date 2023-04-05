@@ -96,11 +96,11 @@ const Articles = () => {
                                 </thead>
                                 <tbody>
                                     {articleList?(articleList.map(post=>{
-                                        const {SL,ID,TITLE,CATEGORY_NAME,THUMBNAIL} = post
+                                        const {SL,ID,TITLE,CATEGORY_NAME,PHOTO_URL} = post
                                         return <tr key={ID}>
                                                 <td>{SL}</td>
                                                 <td>
-                                                    <img src={THUMBNAIL} style={{height:`100px`,width:`auto`}} />
+                                                <img src={PHOTO_URL} style={{height:`100px`,width:`auto`}} />
                                                 </td>
                                                 <td>{TITLE}</td>
                                                 <td>
