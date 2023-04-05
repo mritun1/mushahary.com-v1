@@ -79,6 +79,7 @@ const EditArticleD = () => {
             des: formData.description,
             content: convertedContent,
             photo_file: filePhoto,
+            photo_url: formData.photo_url,
         },{
             headers: {
                 'Content-Type': 'multipart/form-data',
