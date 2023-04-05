@@ -28,6 +28,7 @@ const Editarticle = () => {
         title: '',
         description: '',
         id: '',
+        photo_url: '',
     });
     
     const getEditData = async () => {
@@ -38,7 +39,8 @@ const Editarticle = () => {
                     ...prevState,
                     title: res.data.data.TITLE,
                     description: res.data.data.DES,
-                    id: res.data.data.ID
+                    id: res.data.data.ID,
+                    photo_url: res.data.data.photo_url,
                 }))
 
             }
@@ -186,6 +188,18 @@ const Editarticle = () => {
                                             <td>
                                                 <h6>Article Thumbnail</h6>
                                                 <img src="https://i.ytimg.com/vi/Iq2qT0fRhAA/maxresdefault.jpg" style={{height:`200px`,width:`auto`}} alt="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Article Thumbnail URL</h6>
+                                                <input type="text" name="photo_url" id="photo_url" value={formData.photo_url} onChange={handleInputChange} placeholder="Url of photos" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Thumnail Photo Option</h6>
+                                                <input type="text" disabled value={"photo_url"} />
                                             </td>
                                         </tr>
                                     <tr>

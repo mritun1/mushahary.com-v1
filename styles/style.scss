@@ -1111,7 +1111,10 @@ margin-left: 3px;
                 &>li>ul{
                     list-style-type: none;
                     padding-left: 16px;
-                    @include mobileRightMenuLink()
+                    @include mobileRightMenuLink();
+                    &>a>li{
+                        margin-bottom:20px;
+                    }
                 }
             }
         }

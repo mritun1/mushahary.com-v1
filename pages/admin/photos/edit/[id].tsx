@@ -16,6 +16,7 @@ const EditPhoto = () => {
         description: '',
         photoFile: '',
         id:'',
+        photo_url:'',
     });
 
     const getEditData = async () => {
@@ -28,6 +29,7 @@ const EditPhoto = () => {
                     description: res.data.data.PHOTO_DES,
                     id: res.data.data.ID,
                     photoFile: res.data.data.PHOTO_FILE,
+                    photo_url: res.data.data.photo_url,
                 }))
 
             }
@@ -70,6 +72,7 @@ const EditPhoto = () => {
         formData.append('photo_title', inputData.title);
         formData.append('photo_des', inputData.description);
         formData.append('id', inputData.id);
+        formData.append('photo_url', inputData.photo_url);
 
         try {
             const response = await API_URL.put('/api/v1/photos/edit', formData, {
@@ -123,6 +126,14 @@ const EditPhoto = () => {
                                         })}
                                     </select>
                                 </div>
+
+                                <div>
+                                    <input type="text" value={inputData.photo_url} onChange={handleInputChange} name="photo_url" id="photo_url" placeholder="photo url..." />
+                                </div>
+                                <div>
+                                    <input type="text" value={"photo_url"} disabled />
+                                </div>
+
                                 <div>
                                     <input type="text" value={inputData.title} onChange={handleInputChange} name="title" id="title" placeholder="Photo Title..." />
                                 </div>

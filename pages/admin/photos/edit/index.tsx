@@ -10,6 +10,7 @@ const CreatePhoto = () => {
         title: '',
         description: '',
         photoFile: '',
+        photo_url: '',
     });
     const [loadState,setLoadState] = useState(false)
 
@@ -49,6 +50,7 @@ const CreatePhoto = () => {
         formData.append('photo_category_id', event.target.category.value);
         formData.append('photo_title', inputData.title);
         formData.append('photo_des', inputData.description);
+        formData.append('photo_url', inputData.photo_url);
 
         try {
             const response = await API_URL.post('/api/v1/photos/create', formData, {
@@ -104,6 +106,14 @@ const CreatePhoto = () => {
                                         })}
                                     </select>
                                 </div>
+
+                                <div>
+                                    <input type="text" value={inputData.photo_url} onChange={handleInputChange} name="photo_url" id="photo_url" placeholder="photo url..." />
+                                </div>
+                                <div>
+                                    <input type="text" value={"photo_url"} disabled />
+                                </div>
+
                                 <div>
                                     <input type="text" value={inputData.title} onChange={handleInputChange} name="title" id="title" placeholder="Photo Title..." />
                                 </div>

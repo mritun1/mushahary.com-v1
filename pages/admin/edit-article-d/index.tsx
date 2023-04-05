@@ -18,6 +18,7 @@ const EditArticleD = () => {
     const [formData, setFormData] = useState({
         title: '',
         description: '',
+        photo_url: '',
     });
 
     const Editor = dynamic(
@@ -142,10 +143,24 @@ const EditArticleD = () => {
                                                 </select>
                                             </td>
                                         </tr>
+                                        
                                         <tr>
                                             <td>
-                                                <h6>Article Thumbnail</h6>
+                                                <h6>Article Thumbnail Upload</h6>
                                                 <input type="file" name="thumbnail" id="thumbnail" onChange={handleFileChange} />
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>
+                                                <h6>Article Thumbnail URL</h6>
+                                                <input type="text" name="photo_url" id="photo_url" value={formData.photo_url} onChange={handleInputChange} placeholder="Url of photos" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Thumnail Photo Option</h6>
+                                                <input type="text" disabled value={"photo_url"} />
                                             </td>
                                         </tr>
                                         <tr>
