@@ -119,6 +119,7 @@ const Editarticle = () => {
             content: convertedContent,
             id: formData.id,
             thumbnail: "",
+            photo_url: "",
         })
             .then((response) => {
                 console.log(response.data);
