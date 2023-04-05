@@ -40,7 +40,7 @@ const Editarticle = () => {
                     title: res.data.data.TITLE,
                     description: res.data.data.DES,
                     id: res.data.data.ID,
-                    photo_url: res.data.data.photo_url,
+                    photo_url: res.data.data.PHOTO_URL,
                 }))
 
             }
