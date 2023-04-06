@@ -85,13 +85,10 @@ export default function Photos() {
                                 const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
                                 if (SL == gal1) {
                                     gal1 = gal1 + 3
-                                    return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
-                                        <Image
-                                            src={PHOTO_URL}
-                                            
-                                            alt=""
-                                        />
-                                    </Link>
+                                    return <><Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
+                                        <img
+                                            src={PHOTO_URL} />
+                                    </Link><iframe src="https://drive.google.com/file/d/1Nynv4xQc4lOopI6aJnuzyhbogI3S5N7w/preview" width="640" height="480" allow="autoplay"></iframe></>
                                     
                                 }
                                 
