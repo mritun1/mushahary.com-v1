@@ -247,7 +247,7 @@ export default function Home(props: { allBlogs: []; }) {
                                         </tr>
 
                                         <tr>
-                                            <td>Libraries:</td>
+                                            <td>Libraries &amp; Packages:</td>
                                             <td colSpan={2}>
 
                                                 <span className='lib'>
@@ -268,6 +268,22 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <span className='lib'>
                                                     <span>PHP</span>
                                                     <span>PHPmailer</span>
+                                                </span>
+                                                <span className='lib'>
+                                                    <span>Next.js/Go/PHP</span>
+                                                    <span>.env</span>
+                                                </span>
+                                                <span className='lib'>
+                                                    <span>Go</span>
+                                                    <span>GORM</span>
+                                                </span>
+                                                <span className='lib'>
+                                                    <span>Go</span>
+                                                    <span>JWT/Middleware/API</span>
+                                                </span>
+                                                <span className='lib'>
+                                                    <span>Go</span>
+                                                    <span>Gomail</span>
                                                 </span>
 
                                             </td>
