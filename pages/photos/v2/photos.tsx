@@ -90,7 +90,7 @@ export default function Photos() {
                                         <img
                                             src={PHOTO_URL} />
                                     </Link>
-                                    <iframe src="https://drive.google.com/file/d/1Nynv4xQc4lOopI6aJnuzyhbogI3S5N7w/preview" width="100%" height="auto" allow="autoplay"></iframe>
+                                    {/* <iframe src="https://drive.google.com/file/d/1Nynv4xQc4lOopI6aJnuzyhbogI3S5N7w/preview" width="100%" height="480" allow="autoplay"></iframe> */}
                                     </>)
                                     
                                 }
@@ -103,11 +103,11 @@ export default function Photos() {
                                 const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
                                 if (SL == gal2) {
                                     gal2 = gal2 + 3
-                                    return <Link key={ID} href={"/photos/v2/" + ID + "/" +PHOTO_TITLE}>
+                                    return (<><Link key={ID} href={"/photos/v2/" + ID + "/" +PHOTO_TITLE}>
                                         <img
                                             src={PHOTO_URL}
                                         />
-                                    </Link>
+                                    </Link></>)
                                     
                                 }
                                 
@@ -119,11 +119,11 @@ export default function Photos() {
                                 const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
                                 if (SL == gal3) {
                                     gal3 = gal3 + 3
-                                    return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
+                                    return (<><Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
                                         <img
                                             src={PHOTO_URL}
                                         />
-                                    </Link>  
+                                    </Link> </>) 
                                 }
                                 
                             })) : (<h3>Not Found</h3>) }
