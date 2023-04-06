@@ -54,7 +54,13 @@ const Header = () => {
                                         <a href="https://www.youtube.com/channel/UCAtGNXWv745_aJ1d6hUzIDw">
                                             <li>
                                                 <i className="fa-solid fa-caret-right"></i>
-                                                Youtube Videos
+                                                Youtube Golang
+                                            </li>
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UC4yIAbSHhvVBHKd6z_Zf8-g">
+                                            <li>
+                                                <i className="fa-solid fa-caret-right"></i>
+                                                Youtube Vlog
                                             </li>
                                         </a>
                                         <a href="/articles/v2">
@@ -130,7 +136,13 @@ const Header = () => {
                                     <p>
                                         <Link href="https://www.youtube.com/channel/UCAtGNXWv745_aJ1d6hUzIDw">
                                             <i className="fa-solid fa-caret-right"></i>
-                                            Youtube Videos
+                                            Youtube Golang
+                                        </Link>
+                                    </p>
+                                    <p>
+                                        <Link href="https://www.youtube.com/channel/UC4yIAbSHhvVBHKd6z_Zf8-g">
+                                            <i className="fa-solid fa-caret-right"></i>
+                                            Youtube Vlog
                                         </Link>
                                     </p>
                                     <p>
