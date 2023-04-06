@@ -72,7 +72,7 @@ export default function ArticlesHome() {
 
                     <div className="articles_columns">
 
-                        {articleList.map(post => {
+                        {articleList?( articleList.map(post => {
                             const { SL, ID, TITLE, CATEGORY_NAME, PHOTO_URL, DESCRIPTION } = post
                             return <div key={ID}>
                                 <Link href={"/articles/v2/"+ID+"/" + TITLE}>
@@ -86,7 +86,7 @@ export default function ArticlesHome() {
                                     </div>
                                 </Link>
                             </div>
-                        })}
+                        })):(<p>Sorry! No content Found</p>)}
 
                         
                     </div>
