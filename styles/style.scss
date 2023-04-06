@@ -1123,8 +1123,7 @@ margin-left: 3px;
                     @include mobileRightMenuLink();
                     &>a>li{
                         margin-bottom:20px;
-                        padding-top: 6px;
-                        padding-bottom: 6px;
+                        margin-top: 6px;
                     }
                     
                 }
