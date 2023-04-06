@@ -282,8 +282,6 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <span className='tags'>AWS EC2/s3</span>
                                                 <span className='tags'>Vercel/Godaddy</span>
                                                 <span className='tags'>Git/Github</span>
-                                                <span className='tags'>Google Analytics</span>
-                                                <span className='tags'>Google Search Console</span>
                                                 <span className='tags'>Linux</span>
                                                 <span className='tags'>Corntab/Cornjob</span>
                                                 <span className='tags'>Shell Scripting</span>
@@ -300,6 +298,41 @@ export default function Home(props: { allBlogs: []; }) {
                             </div>
                             <div className="resume_projects">
                                 <p>Here is the list of my Projects.</p>
+
+                                <div className="project">
+                                    <div className="project_head">
+                                        <div className="project_head_text">
+                                            <h4>
+                                                MUSHAHARY.COM
+                                                <Link target="_blank" href="https://mushahary.com/">view &gt;&gt;</Link>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div className="project_content">
+                                        <p>MUSHAHARY.COM is a Personal website created for sharing my own personal experiences.</p>
+                                        <p className='title'>Front-end built in Next.js, Back-end built in Golang Fiber and MySQL database.</p>
+                                        <ol className='ol'>
+                                            <li>Go Fiber Framework is used for backend.</li>
+                                            <li>Golang Fiber Middleware and JWT for Authentication.</li>
+                                            <li>Golang Fiber Rest API using GORM.</li>
+                                            <li>Using Go AWS SDK integrated with AWS s3.</li>
+                                            <li>Gomail package is used here to send email.</li>
+                                            <li>.env is used to store credential information.</li>
+                                            <li>Go Dokerfile is also included to create docker image whenever we want.</li>
+                                            <li>Built in CMS(Content Mangement System), where admin can login and write articles and upload photos.</li>
+                                            <li>Followed the MVC(Model View Controller) and OOP(Object Oriented Programming)</li>
+                                        </ol>
+                                        <ol className='ol'>
+                                            <li>Next.js is used for frontend.</li>
+                                            <li>Pages were build with (.tsx) or type script.</li>
+                                            <li>Dotenv package is used to store credential information.</li>
+                                            <li>Next.js Dokerfile is also included to create docker image whenever we want.</li>
+                                            <li>Axios package is used for fetching API.</li>
+                                            <li>Draft.js package is used to create WYSIWYG text editor.</li>
+                                            <li>SCSS is used for better CSS.</li>
+                                        </ol>
+                                    </div>
+                                </div>
 
                                 <div className="project">
                                     <div className="project_head">
@@ -336,30 +369,13 @@ export default function Home(props: { allBlogs: []; }) {
                                         <ol className='ol'>
                                             <li>Here, my own PHP Web Framework is used. Please <Link href="https://github.com/mritun1/MritunjoYframe" target="_blank">Click Here</Link> to check my self-made PHP Web Framework.</li>
                                             <li>Login, Logout, Change Password and Forgot Password system for Admin or Managers.</li>
-                                            <li>CRUD Operation API in PHP, for Add Employees and his details.</li>
+                                            <li>CRUD Operation and API in PHP.</li>
+                                            <li>The website is generally developed for our company used only. For listing our employees and storing their details for further used, whenever required by our Managers.</li>
                                         </ol>
                                     </div>
                                 </div>
 
-                                <div className="project">
-                                    <div className="project_head">
-                                        <div className="project_head_text">
-                                            <h4>
-                                                MRITUNJOY.COM
-                                                <Link target="_blank" href="https://72dragons.health/">view &gt;&gt;</Link>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div className="project_content">
-                                        <p>MRITUNJOY.COM is a Personal website created for sharing my own personal experiences.</p>
-                                        <p className='title'>Front-end built in Next.js, Back-end built in Golang Fiber and MySQL database.</p>
-                                        <ol className='ol'>
-                                            <li>Golang Fiber Middleware for Authentication.</li>
-                                            <li>Golang Fiber Rest API Admin can Login and Add new articles.</li>
-                                            <li>Viewers can send Email to the admin directly from website&apos;s contact page.</li>
-                                        </ol>
-                                    </div>
-                                </div>
+                                
 
                             </div>
 
