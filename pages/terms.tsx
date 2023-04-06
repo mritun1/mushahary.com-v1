@@ -21,7 +21,7 @@ export default function Terms() {
                     <p>Here are some terms and conditions that you need to follow.</p>
                     <ol>
                         <li>Never copy the content of this website, and paste it on your website. because this is only the personal content shared by Mritunjoy Mushahary.</li>
-                        <li>because Mritunjoy Mushahary had shared his contact details or some personal details. Please don&apos;t misuse the given details because the information is only available to Human Resources (HR) at other companies.</li>
+                        <li>Because Mritunjoy Mushahary had shared his contact details or some personal details. Please don&apos;t misuse the given details because the information is only available to Human Resources (HR) at other companies.</li>
                     </ol>
                 </div>
 

@@ -85,7 +85,7 @@ export default function Photos() {
                                 const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
                                 if (SL == gal1) {
                                     gal1 = gal1 + 3
-                                    return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_URL}>
+                                    return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
                                         <img
                                             src={PHOTO_URL}
                                         />

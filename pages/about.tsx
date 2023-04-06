@@ -20,10 +20,10 @@ export default function About() {
                     <h1>About - Mritunjoy Mushahary</h1>
                     <p>Hello everybody, and thank you for visiting my website. The main objectives of this website are listed below:</p>
                     <ol>
-                        <li>to show my resume to everyone.</li>
-                        <li>to practice and share my experiences.</li>
-                        <li>write articles about Golang DSA (Data Structure and Algorithms). so that others can read and learn.</li>
-                        <li>to host my completed projects for practicing DSA (Data Structure and Algorithm).</li>
+                        <li>To show my resume to everyone.</li>
+                        <li>To practice and share my experiences.</li>
+                        <li>Write articles about Golang DSA (Data Structure and Algorithms). so that others can read and learn.</li>
+                        <li>To host my completed projects for practicing DSA (Data Structure and Algorithm).</li>
                     </ol>
                 </div>
 
