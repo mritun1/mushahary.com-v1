@@ -12,7 +12,7 @@ export default function Photos() {
 
     const [photosList, setPhotosList] = useState([])
     let [pagNum, setPagNum] = useState(1)
-    var limit = 1
+    var limit = 12
     var offset = 0
     const getArticleLists = async (o: any, l: any) => {
         try {
@@ -86,8 +86,10 @@ export default function Photos() {
                                 if (SL == gal1) {
                                     gal1 = gal1 + 3
                                     return <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
-                                        <img
+                                        <Image
                                             src={PHOTO_URL}
+                                            
+                                            alt=""
                                         />
                                     </Link>
                                     
