@@ -388,6 +388,10 @@ a {
                     margin-top: 0px;
                     padding-left: 0px;
                     margin-left: 22px;
+                    &>li {
+                            padding-top: 6px;
+                            padding-bottom: 6px;
+                        }
                     
                 }
 
@@ -1118,7 +1122,10 @@ margin-left: 3px;
                     @include mobileRightMenuLink();
                     &>a>li{
                         margin-bottom:20px;
+                        padding-top: 6px;
+                        padding-bottom: 6px;
                     }
+                    
                 }
             }
         }
