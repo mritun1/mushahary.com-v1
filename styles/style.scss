@@ -388,6 +388,7 @@ a {
                     margin-top: 0px;
                     padding-left: 0px;
                     margin-left: 22px;
+                    
                 }
 
                 border-radius:0 6px 6px 6px;
@@ -476,7 +477,10 @@ a {
     @media only screen and (max-width:764px) {
         width: 100%;
     }
-
+    & > ol > li {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
     margin-bottom: 64px;
 }
 
