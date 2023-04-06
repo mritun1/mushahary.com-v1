@@ -10,7 +10,7 @@ const CreatePhoto = () => {
         title: '',
         description: '',
         photoFile: '',
-        photo_url: '',
+        photo_url: 'https://drive.google.com/uc?export=view&id=',
     });
     const [loadState,setLoadState] = useState(false)
 

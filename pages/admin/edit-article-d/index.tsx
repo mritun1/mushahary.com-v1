@@ -18,7 +18,7 @@ const EditArticleD = () => {
     const [formData, setFormData] = useState({
         title: '',
         description: '',
-        photo_url: '',
+        photo_url: 'https://drive.google.com/uc?export=view&id=',
     });
 
     const Editor = dynamic(
