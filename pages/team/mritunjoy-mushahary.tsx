@@ -99,7 +99,7 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <i className="fa-solid fa-star"></i>
                                                 <i className="fa-solid fa-star-half-stroke"></i>
                                             </td>
-                                            <td>4 yrs exp.</td>
+                                            <td>6 yrs exp.</td>
                                         </tr>
 
                                         <tr>
@@ -111,29 +111,7 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <i className="fa-solid fa-star"></i>
                                                 <i className="fa-regular fa-star"></i>
                                             </td>
-                                            <td>3 yrs exp.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Golang (GO):</td>
-                                            <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                            </td>
-                                            <td>1 yrs exp.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>React.js/Next.js:</td>
-                                            <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                            </td>
-                                            <td>1 yrs exp.</td>
+                                            <td>5 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>JavaScript:</td>
@@ -144,7 +122,7 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <i className="fa-regular fa-star"></i>
                                                 <i className="fa-regular fa-star"></i>
                                             </td>
-                                            <td>3 yrs exp.</td>
+                                            <td>4 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>MySQL:</td>
@@ -155,52 +133,7 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <i className="fa-regular fa-star"></i>
                                                 <i className="fa-regular fa-star"></i>
                                             </td>
-                                            <td>2 yrs exp.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>jQuery:</td>
-                                            <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                            </td>
-                                            <td>1 yrs exp.</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>Dart/Flutter:</td>
-                                            <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                            </td>
-                                            <td>6 months exp.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Vue.js/Nuxt.js:</td>
-                                            <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                            </td>
-                                            <td>6 months exp.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>C/C++:</td>
-                                            <td className='stars'>
-                                                <i className="fa-solid fa-star-half-stroke"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                            </td>
-                                            <td>3 months exp.</td>
+                                            <td>4 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>XML/JSON:</td>
@@ -211,18 +144,7 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <i className="fa-regular fa-star"></i>
                                                 <i className="fa-regular fa-star"></i>
                                             </td>
-                                            <td>3 yrs exp.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>SEO:</td>
-                                            <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                            </td>
-                                            <td>6 months exp.</td>
+                                            <td>4 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>UI/UX Design:</td>
@@ -233,7 +155,84 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <i className="fa-regular fa-star"></i>
                                                 <i className="fa-regular fa-star"></i>
                                             </td>
-                                            <td>1 yrs exp.</td>
+                                            <td>2 yrs exp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>React.js/Next.js:</td>
+                                            <td className='stars'>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                            </td>
+                                            <td>1 yr exp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Golang (GO):</td>
+                                            <td className='stars'>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                            </td>
+                                            <td>1 yr exp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vue.js/Nuxt.js:</td>
+                                            <td className='stars'>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                            </td>
+                                            <td>1 yr exp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dart/Flutter:</td>
+                                            <td className='stars'>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                            </td>
+                                            <td>1 yr exp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>jQuery:</td>
+                                            <td className='stars'>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                            </td>
+                                            <td>1 yr exp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SEO:</td>
+                                            <td className='stars'>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-solid fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                            </td>
+                                            <td>1 yr exp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>C/C++:</td>
+                                            <td className='stars'>
+                                                <i className="fa-solid fa-star-half-stroke"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                                <i className="fa-regular fa-star"></i>
+                                            </td>
+                                            <td>9 months exp.</td>
                                         </tr>
                                         <tr>
                                             <td>Data Structure (DSA):</td>
@@ -244,8 +243,9 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <i className="fa-regular fa-star"></i>
                                                 <i className="fa-regular fa-star"></i>
                                             </td>
-                                            <td>3 months exp.</td>
+                                            <td>6 months exp.</td>
                                         </tr>
+
                                         <tr>
                                             <td>Libraries:</td>
                                             <td colSpan={2}>
@@ -261,8 +261,8 @@ export default function Home(props: { allBlogs: []; }) {
                                                 </span>
 
                                                 <span className='lib'>
-                                                    <span>PHP</span>
-                                                    <span>Fast2sms.com API</span>
+                                                    <span>Go</span>
+                                                    <span>AWS SDK</span>
                                                 </span>
 
                                                 <span className='lib'>
@@ -273,19 +273,23 @@ export default function Home(props: { allBlogs: []; }) {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Tools:</td>
+                                            <td>Tools &amp; Servers:</td>
                                             <td colSpan={2}>
                                                 <span className='tags'>SCSS/SASS</span>
                                                 <span className='tags'>FTP/Putty/SSH</span>
                                                 <span className='tags'>XAMPP/Apache2</span>
                                                 <span className='tags'>Figma.com</span>
                                                 <span className='tags'>AWS EC2/s3</span>
+                                                <span className='tags'>Vercel/Godaddy</span>
                                                 <span className='tags'>Git/Github</span>
                                                 <span className='tags'>Google Analytics</span>
                                                 <span className='tags'>Google Search Console</span>
                                                 <span className='tags'>Linux</span>
                                                 <span className='tags'>Corntab/Cornjob</span>
                                                 <span className='tags'>Shell Scripting</span>
+                                                <span className='tags'>Nginx</span>
+                                                <span className='tags'>Docker</span>
+                                                <span className='tags'>Jenkins (CI/CD)</span>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -370,7 +374,7 @@ export default function Home(props: { allBlogs: []; }) {
                                         alt='LeetCode'
                                         height={20}
                                         width={20}
-                                        src="/../public/imgs/social/LeetCode.png"
+                                        src="/imgs/social/LeetCode.png"
                                     />
                                     <Link href="https://leetcode.com/mritunjoy/" target="_blank">
                                         LeetCode/mritunjoy
@@ -382,7 +386,7 @@ export default function Home(props: { allBlogs: []; }) {
                                         alt='Github'
                                         height={20}
                                         width={20}
-                                        src="/../public/imgs/social/github.png"
+                                        src="/imgs/social/github.png"
                                     />
                                     <Link href="https://github.com/mritun1" target="_blank">
                                         Github/mritun1
@@ -394,7 +398,7 @@ export default function Home(props: { allBlogs: []; }) {
                                         alt='LinkedIn'
                                         height={20}
                                         width={20}
-                                        src="/../public/imgs/social/linkedin.png"
+                                        src="/imgs/social/linkedin.png"
                                     />
                                     <Link href="https://www.linkedin.com/in/mritunjoy8011/" target="_blank">
                                         LinkedIn/mritunjoy8011
@@ -406,7 +410,7 @@ export default function Home(props: { allBlogs: []; }) {
                                         alt='Facebook'
                                         height={20}
                                         width={20}
-                                        src="/../public/imgs/social/facebook.png"
+                                        src="/imgs/social/facebook.png"
                                     />
                                     <Link href="https://www.facebook.com/mritunjoy8011" target="_blank">
                                         Facebook/mritunjoy8011
@@ -418,7 +422,7 @@ export default function Home(props: { allBlogs: []; }) {
                                         alt='Twitter'
                                         height={20}
                                         width={20}
-                                        src="/../public/imgs/social/twitter.png"
+                                        src="/imgs/social/twitter.png"
                                     />
                                     <Link href="https://twitter.com/mritunjoy8011" target="_blank">
                                         Twitter/mritunjoy8011
@@ -430,7 +434,7 @@ export default function Home(props: { allBlogs: []; }) {
                                         alt='Golang Forum'
                                         height={20}
                                         width={20}
-                                        src="/../public/imgs/social/golangbridge.png"
+                                        src="/imgs/social/golangbridge.png"
                                     />
                                     <Link href="https://forum.golangbridge.org/u/mritunjoy_mushahary/" target="_blank">
                                         GolangBridge/u/mritunjoy_mushahary/
