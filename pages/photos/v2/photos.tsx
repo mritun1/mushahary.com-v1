@@ -12,46 +12,39 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 export default function Photos() {
 
     const [photosList, setPhotosList] = useState([])
-    let [pagNum, setPagNum] = useState(1)
+    
     var limit = 6
-    var offset = 0
-    var totalPhotos = 0;
-    const getArticleLists = async (o: any, l: any) => {
+
+    const [totalPhotos, setTotalPhotos] = useState(0)
+    const fetchMoreData = async () => {
         try {
-            const res = await API_URL.get("/api/v1/photos/getAll/" + o + "/" + l)
-            setPhotosList(res.data.data)
-            const pagNumNew = parseInt(res.data.total) / limit
-            setPagNum(pagNumNew)
-            totalPhotos = res.data.total
+            const res = await API_URL.get(`/api/v1/photos/getAll/${photosList.length}/${limit}`)
+            setPhotosList(photosList.concat(res.data.data))
+            setTotalPhotos(res.data.total)
         } catch (error) {
             console.log(error)
         }
     }
 
-    
+    //var offset = 0
+    // var totalPhotos = 0;
+    // const getArticleLists = async (o: any, l: any) => {
+    //     try {
+    //         const res = await API_URL.get("/api/v1/photos/getAll/" + o + "/" + l)
+    //         setPhotosList(res.data.data)
+    //         const pagNumNew = parseInt(res.data.total) / limit
+            
+    //         totalPhotos = res.data.total
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
 
-    //PAGINATION START
-    let newlimit = 0
-    function articlePag(e: any) {
-        newlimit = e.target.getAttribute("pag-attr") * limit
-        if (newlimit > limit) {
-            offset = newlimit - limit
-        }
-        getArticleLists(offset, limit)
 
-    }
-    let pagBtns = []
-    let btnNum = 0
-    for (let i = 0; i <= pagNum; i++) {
-        btnNum++
-        pagBtns.push(<button key={btnNum} onClick={articlePag} pag-attr={btnNum}>{btnNum}</button>)
-    }
-    //PAGINATION END
-
-    useEffect(() => {
-        getArticleLists(offset, limit)
+    // useEffect(() => {
+    //     getArticleLists(offset, limit)
         
-    }, [])
+    // }, [])
 
     var gal1 = 1
     var gal2 = 2
@@ -79,9 +72,9 @@ export default function Photos() {
 
                     <PhotosSearch />
 
-                    {/* <InfiniteScroll
+                    <InfiniteScroll
                         dataLength={totalPhotos} //This is important field to render the next data
-                        next={()=>articlePag}
+                        next={fetchMoreData}
                         hasMore={true}
                         loader={<h4>Loading...</h4>}
                         endMessage={
@@ -90,7 +83,7 @@ export default function Photos() {
                             </p>
                         }
                     >
-                    </InfiniteScroll> */}
+                    
                         <div className="photos_lists">
 
 
@@ -144,12 +137,7 @@ export default function Photos() {
 
                             </div>
                         </div>
-                    
-
-                    <div className="adminArticleListPag">
-                        {pagBtns}
-                    </div>
-
+                    </InfiniteScroll>
                     
 
                     {photosList ? (<div className="loading">
@@ -167,3 +155,4 @@ export default function Photos() {
         </div>
     )
 }
+
