@@ -1,6 +1,9 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
+import { faSearch } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
+
 const PhotosSearch = (props:any) => {
 
     const [searchTxt, setSearchTxt] = useState("")
@@ -28,7 +31,8 @@ const PhotosSearch = (props:any) => {
                     <div>
                         <div onClick={searchForm}>
                             {/* <i className="fa-sharp fa-solid fa-magnifying-glass"></i> */}
-                            Search
+                            {/* <FontAwesomeIcon icon="fa-sharp fa-solid fa-magnifying-glass" /> */}
+                            <FontAwesomeIcon style={{ fontSize: "25px" }} icon={faSearch}></FontAwesomeIcon>
                         </div>
                     </div>
                 </div>

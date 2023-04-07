@@ -384,6 +384,10 @@ export default function Home(props: { allBlogs: []; }) {
                                     <span>Corntab</span>
                                 </button>
                                 <button className='lib'>
+                                    <span>UI/UX</span>
+                                    <span>Figma.com</span>
+                                </button>
+                                <button className='lib'>
                                     <span>Others</span>
                                     <span>CMS/MVC</span>
                                 </button>
@@ -394,7 +398,6 @@ export default function Home(props: { allBlogs: []; }) {
                             <div>
                                 <button className='tags'>FTP/Putty/SSH</button>
                                 <button className='tags'>XAMPP/Apache2</button>
-                                <button className='tags'>Figma.com</button>
                                 <button className='tags'>AWS EC2/s3</button>
                                 <button className='tags'>Vercel</button>
                                 <button className='tags'>Godaddy</button>
@@ -404,6 +407,7 @@ export default function Home(props: { allBlogs: []; }) {
                                 <button className='tags'>Nginx</button>
                                 <button className='tags'>Docker</button>
                                 <button className='tags'>Jenkins (CI/CD)</button>
+                                <button className='tags'>SSL/Certbot Letsencrypt</button>
                             </div>
                             <div className="resume_heading">
                                 <h3>PROJECTs</h3>
