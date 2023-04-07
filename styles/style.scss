@@ -923,7 +923,7 @@ margin-left: 3px;
 
     
 
-    &>.photos_lists{
+    .photos_lists{
         //border:2px solid red;
         display: flex;
         justify-content: center;
@@ -945,7 +945,7 @@ margin-left: 3px;
             }
         }
     }
-    &>.photo_view{
+    .photo_view{
         padding:6px;
         
         &>img{
@@ -957,7 +957,7 @@ margin-left: 3px;
             border-radius: 6px;
         }
     }
-    &>.related_photos{
+    .related_photos{
         background-color: #7a9b73;
         display: flex;
         flex-wrap: nowrap;

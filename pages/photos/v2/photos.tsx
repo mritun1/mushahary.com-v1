@@ -13,7 +13,7 @@ export default function Photos() {
 
     const [photosList, setPhotosList] = useState([])
     let [pagNum, setPagNum] = useState(1)
-    var limit = 22
+    var limit = 6
     var offset = 0
     var totalPhotos = 0;
     const getArticleLists = async (o: any, l: any) => {
