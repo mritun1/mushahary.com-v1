@@ -15,16 +15,37 @@ export default function Photos() {
     
     var limit = 6
 
-    const [totalPhotos, setTotalPhotos] = useState(0)
-    const fetchMoreData = async () => {
-        try {
-            const res = await API_URL.get(`/api/v1/photos/getAll/${photosList.length}/${limit}`)
-            setPhotosList(photosList.concat(res.data.data))
-            setTotalPhotos(res.data.total)
-        } catch (error) {
-            console.log(error)
+    //var [totalPhotos, setTotalPhotos] = useState(0)
+    const fetchMorePhotos = async () => {
+        if (pageNum > 1) {
+            const nextPageNum = pageNum - 1;
+            const newOffset = nextPageNum * limit;
+            try {
+                const res = await API_URL.get(`/api/v1/photos/getAll/${newOffset}/${limit}`);
+                //setPhotosList([...photosList, ...res.data.data]);
+                setPhotosList(res.data.data)
+                setPageNum(nextPageNum);
+            } catch (error) {
+                console.log(error);
+            }
         }
-    }
+    };
+
+    var offset = 0
+    let [pageNum, setPageNum] = useState(1);
+    useEffect(() => {
+        const fetchPhotos = async () => {
+            try {
+                const res = await API_URL.get(`/api/v1/photos/getAll/${offset}/${limit}`);
+                setPhotosList(res.data.data);
+                const totalPages = Math.ceil(res.data.total / limit);
+                setPageNum(totalPages);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchPhotos();
+    }, []);
 
     //var offset = 0
     // var totalPhotos = 0;
@@ -73,9 +94,9 @@ export default function Photos() {
                     <PhotosSearch />
 
                     <InfiniteScroll
-                        dataLength={totalPhotos} //This is important field to render the next data
-                        next={fetchMoreData}
-                        hasMore={true}
+                        dataLength={photosList.length}
+                        next={fetchMorePhotos}
+                        hasMore={pageNum > 1}
                         loader={<h4>Loading...</h4>}
                         endMessage={
                             <p style={{ textAlign: 'center' }}>
