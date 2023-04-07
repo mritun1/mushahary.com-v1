@@ -79,7 +79,7 @@ export default function Photos() {
 
                     <PhotosSearch />
 
-                    <InfiniteScroll
+                    {/* <InfiniteScroll
                         dataLength={totalPhotos} //This is important field to render the next data
                         next={()=>articlePag}
                         hasMore={true}
@@ -90,6 +90,7 @@ export default function Photos() {
                             </p>
                         }
                     >
+                    </InfiniteScroll> */}
                         <div className="photos_lists">
 
 
@@ -143,7 +144,7 @@ export default function Photos() {
 
                             </div>
                         </div>
-                    </InfiniteScroll>
+                    
 
                     <div className="adminArticleListPag">
                         {pagBtns}
