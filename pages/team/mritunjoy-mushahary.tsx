@@ -7,9 +7,12 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
+
 export default function Home(props: { allBlogs: []; }) {
 
     const [items] = useState(props.allBlogs);
+
+    
 
     return (
         <div >
@@ -253,12 +256,7 @@ export default function Home(props: { allBlogs: []; }) {
                             <div >
                                 <button className='lib'>
                                     <span>CSS</span>
-                                    <span>Bootstrap</span>
-                                </button>
-
-                                <button className='lib'>
-                                    <span>CSS</span>
-                                    <span>TailwindCSS</span>
+                                    <span>Bootstrap/TailwindCSS</span>
                                 </button>
                                 <button className='lib'>
                                     <span>Go</span>
@@ -312,6 +310,10 @@ export default function Home(props: { allBlogs: []; }) {
                                 <button className='lib'>
                                     <span>Next.js</span>
                                     <span>Nprogress (nextjs-progressbar)</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Next.js</span>
+                                    <span>FontAwesome</span>
                                 </button>
                                 <button className='lib'>
                                     <span>CSS3/Next.js</span>
@@ -601,3 +603,7 @@ export default function Home(props: { allBlogs: []; }) {
         </div>
     )
 }
+function useEffect(arg0: () => () => void, arg1: never[]) {
+    throw new Error('Function not implemented.')
+}
+

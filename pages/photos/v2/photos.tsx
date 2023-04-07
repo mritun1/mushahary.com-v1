@@ -7,6 +7,7 @@ import Header from '../../../component/common/Header'
 import PhotosCategory from '../../../component/public/photos/PhotosCategory'
 import PhotosSearch from '../../../component/public/photos/PhotosSearch'
 import API_URL from '../../../controllers/backend/api_url'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 export default function Photos() {
 
@@ -14,13 +15,14 @@ export default function Photos() {
     let [pagNum, setPagNum] = useState(1)
     var limit = 22
     var offset = 0
+    var totalPhotos = 0;
     const getArticleLists = async (o: any, l: any) => {
         try {
             const res = await API_URL.get("/api/v1/photos/getAll/" + o + "/" + l)
             setPhotosList(res.data.data)
             const pagNumNew = parseInt(res.data.total) / limit
             setPagNum(pagNumNew)
-            
+            totalPhotos = res.data.total
         } catch (error) {
             console.log(error)
         }
@@ -77,59 +79,73 @@ export default function Photos() {
 
                     <PhotosSearch />
 
-                    <div className="photos_lists">
+                    <InfiniteScroll
+                        dataLength={totalPhotos} //This is important field to render the next data
+                        next={() => getArticleLists(totalPhotos, limit)}
+                        hasMore={true}
+                        loader={<h4>Loading...</h4>}
+                        endMessage={
+                            <p style={{ textAlign: 'center' }}>
+                                <b>Yay! You have seen it all</b>
+                            </p>
+                        }
+                    >
+                        <div className="photos_lists">
 
 
-                        <div>
-                            {photosList?(photosList.map(post => {
-                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
-                                if (SL == gal1) {
-                                    gal1 = gal1 + 3
-                                    return (<>
-                                    <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
-                                        <img
-                                            src={PHOTO_URL} />
-                                    </Link>
-                                    {/* <iframe src="https://drive.google.com/file/d/1Nynv4xQc4lOopI6aJnuzyhbogI3S5N7w/preview" width="100%" height="480" allow="autoplay"></iframe> */}
-                                    </>)
-                                    
-                                }
-                                
-                            })):(<h3>Not Found</h3>)}
-                            
+                            <div>
+                                {photosList ? (photosList.map(post => {
+                                    const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
+                                    if (SL == gal1) {
+                                        gal1 = gal1 + 3
+                                        return (<>
+                                            <Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
+                                                <img
+                                                    src={PHOTO_URL} />
+                                            </Link>
+                                            {/* <iframe src="https://drive.google.com/file/d/1Nynv4xQc4lOopI6aJnuzyhbogI3S5N7w/preview" width="100%" height="480" allow="autoplay"></iframe> */}
+                                        </>)
+
+                                    }
+
+                                })) : (<h3>Not Found</h3>)}
+
+                            </div>
+                            <div>
+                                {photosList ? (photosList.map(post => {
+                                    const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
+                                    if (SL == gal2) {
+                                        gal2 = gal2 + 3
+                                        return (<><Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
+                                            <img
+                                                src={PHOTO_URL}
+                                            />
+                                        </Link></>)
+
+                                    }
+
+                                })) : (<h3>Not Found</h3>)}
+
+                            </div>
+                            <div>
+                                {photosList ? (photosList.map(post => {
+                                    const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
+                                    if (SL == gal3) {
+                                        gal3 = gal3 + 3
+                                        return (<><Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
+                                            <img
+                                                src={PHOTO_URL}
+                                            />
+                                        </Link> </>)
+                                    }
+
+                                })) : (<h3>Not Found</h3>)}
+
+                            </div>
                         </div>
-                        <div>
-                            {photosList ? (photosList.map(post => {
-                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
-                                if (SL == gal2) {
-                                    gal2 = gal2 + 3
-                                    return (<><Link key={ID} href={"/photos/v2/" + ID + "/" +PHOTO_TITLE}>
-                                        <img
-                                            src={PHOTO_URL}
-                                        />
-                                    </Link></>)
-                                    
-                                }
-                                
-                            })) : (<h3>Not Found</h3>) }
-                            
-                        </div>
-                        <div>
-                            {photosList ? (photosList.map(post => {
-                                const { SL, ID, PHOTO_TITLE, PHOTO_CATEGORY_NAME, PHOTO_URL, PHOTO_DES } = post
-                                if (SL == gal3) {
-                                    gal3 = gal3 + 3
-                                    return (<><Link key={ID} href={"/photos/v2/" + ID + "/" + PHOTO_TITLE}>
-                                        <img
-                                            src={PHOTO_URL}
-                                        />
-                                    </Link> </>) 
-                                }
-                                
-                            })) : (<h3>Not Found</h3>) }
-                                
-                        </div>
-                    </div>
+                    </InfiniteScroll>
+
+                    
 
                     {photosList ? (<div className="loading">
                         <img

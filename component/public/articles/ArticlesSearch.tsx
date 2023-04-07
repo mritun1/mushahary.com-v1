@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
 const ArticlesSearch = (props:any) => {
     const [searchTxt, setSearchTxt] = useState("")
@@ -23,7 +25,7 @@ const ArticlesSearch = (props:any) => {
                     </div>
                     <div>
                         <div onClick={searchForm}>
-                            <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </div>
                     </div>
                 </div>
