@@ -13,6 +13,7 @@ const PhotosSearch = (props:any) => {
         setSearchTxt(props.myProp)
     },[])
     const searchForm = () => {
+        alert(searchTxt)
         window.location.href = "/photos/v2/search/"+searchTxt
     }
     return (
