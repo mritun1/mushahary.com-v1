@@ -107,207 +107,143 @@ export default function Home(props: { allBlogs: []; }) {
                                         <tr>
                                             <td>PHP:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>5 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>JavaScript:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
+                                                
                                             </td>
                                             <td>4 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>MySQL:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>4 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>XML/JSON:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+
                                             </td>
                                             <td>4 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>UI/UX Design:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>2 yrs exp.</td>
                                         </tr>
                                         <tr>
                                             <td>React.js/Next.js:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>1 yr exp.</td>
                                         </tr>
                                         <tr>
                                             <td>Golang (GO):</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>1 yr exp.</td>
                                         </tr>
                                         <tr>
                                             <td>Vue.js/Nuxt.js:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>1 yr exp.</td>
                                         </tr>
                                         <tr>
                                             <td>Dart/Flutter:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>1 yr exp.</td>
                                         </tr>
                                         <tr>
                                             <td>jQuery:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                               
                                             </td>
                                             <td>1 yr exp.</td>
                                         </tr>
                                         <tr>
                                             <td>SEO:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>1 yr exp.</td>
                                         </tr>
                                         <tr>
                                             <td>C/C++:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star-half-stroke"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                               
                                             </td>
                                             <td>9 months exp.</td>
                                         </tr>
                                         <tr>
                                             <td>Data Structure (DSA):</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
-                                                <i className="fa-regular fa-star"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
+                                                
                                             </td>
                                             <td>6 months exp.</td>
                                         </tr>
 
-                                        {/* <tr>
-                                            <td>Libraries &amp; Packages:</td>
-                                            <td colSpan={2}>
-
-                                                <span className='lib'>
-                                                    <span>CSS</span>
-                                                    <span>Bootstrap</span>
-                                                </span>
-
-                                                <span className='lib'>
-                                                    <span>CSS</span>
-                                                    <span>TailwindCSS</span>
-                                                </span>
-
-                                                <span className='lib'>
-                                                    <span>Go</span>
-                                                    <span>AWS SDK</span>
-                                                </span>
-
-                                                <span className='lib'>
-                                                    <span>PHP</span>
-                                                    <span>PHPmailer</span>
-                                                </span>
-                                                <span className='lib'>
-                                                    <span>Next.js/Go/PHP</span>
-                                                    <span>.env</span>
-                                                </span>
-                                                <span className='lib'>
-                                                    <span>Go</span>
-                                                    <span>GORM</span>
-                                                </span>
-                                                <span className='lib'>
-                                                    <span>Go</span>
-                                                    <span>JWT/Middleware/API</span>
-                                                </span>
-                                                <span className='lib'>
-                                                    <span>Go</span>
-                                                    <span>Gomail</span>
-                                                </span>
-
-                                            </td>
-                                        </tr> */}
-                                        {/* <tr>
-                                            <td>Tools &amp; Servers:</td>
-                                            <td colSpan={2}>
-                                                <span className='tags'>SCSS/SASS</span>
-                                                <span className='tags'>FTP/Putty/SSH</span>
-                                                <span className='tags'>XAMPP/Apache2</span>
-                                                <span className='tags'>Figma.com</span>
-                                                <span className='tags'>AWS EC2/s3</span>
-                                                <span className='tags'>Vercel/Godaddy</span>
-                                                <span className='tags'>Git/Github</span>
-                                                <span className='tags'>Linux</span>
-                                                <span className='tags'>Corntab/Cornjob</span>
-                                                <span className='tags'>Shell Scripting</span>
-                                                <span className='tags'>Nginx</span>
-                                                <span className='tags'>Docker</span>
-                                                <span className='tags'>Jenkins (CI/CD)</span>
-                                            </td>
-                                        </tr> */}
+                                        
                                     </tbody>
                                 </table>
                             </div>

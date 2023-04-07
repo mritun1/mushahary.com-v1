@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import Link from "next/link"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
+import { faBox, faCaretRight, faCircleDot, faHouse, faPeopleGroup, faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
+
 const Header = () => {
     const [mobileMenuStatus,setMobileMenuStatus] = useState(false)
     function mobileMenuHandle(){
@@ -29,66 +32,66 @@ const Header = () => {
                         {mobileMenuStatus ? (<div className="rightMenuMobileDropDown">
                             <ul>
                                 <a href="/">
-                                    <li><i className="fa-solid fa-file"></i> Home</li>
+                                    <li><FontAwesomeIcon icon={faHouse} /> Home</li>
                                 </a>
                                 <li>
-                                    <p><i className="fa-solid fa-people-group"></i> Team</p>
+                                    <p><FontAwesomeIcon icon={faPeopleGroup} /> Team</p>
                                     <ul>
                                         <a href="/team/mritunjoy-mushahary">
                                             <li>
-                                                <i className="fa-solid fa-caret-right"></i>
+                                                <FontAwesomeIcon icon={faCaretRight} />
                                                 Mritunjoy Mushahary
                                             </li>
                                         </a>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p><i className="fa-solid fa-newspaper"></i> Services & Products</p>
+                                    <p><FontAwesomeIcon icon={faBox} /> Services & Products</p>
                                     <ul>
                                         <a href="/photos/v2/photos">
                                             <li>
-                                                <i className="fa-solid fa-caret-right"></i>
+                                                <FontAwesomeIcon icon={faCaretRight} />
                                                 Photos
                                             </li>
                                         </a>
                                         <a href="https://www.youtube.com/channel/UCAtGNXWv745_aJ1d6hUzIDw">
                                             <li>
-                                                <i className="fa-solid fa-caret-right"></i>
+                                                <FontAwesomeIcon icon={faCaretRight} />
                                                 Youtube Golang
                                             </li>
                                         </a>
                                         <a href="https://www.youtube.com/channel/UC4yIAbSHhvVBHKd6z_Zf8-g">
                                             <li>
-                                                <i className="fa-solid fa-caret-right"></i>
+                                                <FontAwesomeIcon icon={faCaretRight} />
                                                 Youtube Vlog
                                             </li>
                                         </a>
                                         <a href="/articles/v2">
                                             <li>
-                                                <i className="fa-solid fa-caret-right"></i>
+                                                <FontAwesomeIcon icon={faCaretRight} />
                                                 Articles
                                             </li>
                                         </a>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p><i className="fa-solid fa-circle-chevron-down"></i> Others</p>
+                                    <p><FontAwesomeIcon icon={faCircleDot} /> Others</p>
                                     <ul>
                                         <a href="/contact">
                                             <li>
-                                                <i className="fa-solid fa-caret-right"></i>
+                                                <FontAwesomeIcon icon={faCaretRight} />
                                                 Contact
                                             </li>
                                         </a>
                                         <a href="/terms">
                                             <li>
-                                                <i className="fa-solid fa-caret-right"></i>
+                                                <FontAwesomeIcon icon={faCaretRight} />
                                                 Terms&Conditions
                                             </li>
                                         </a>
                                         <a href="/about">
                                             <li>
-                                                <i className="fa-solid fa-caret-right"></i>
+                                                <FontAwesomeIcon icon={faCaretRight} />
                                                 About us
                                             </li>
                                         </a>
@@ -102,19 +105,19 @@ const Header = () => {
                         <ul className="rightMenuDesktopUl">
                             <li>
                                 <Link href="/" >
-                                    <i className="fa-solid fa-file"></i>
+                                    <FontAwesomeIcon icon={faHouse} />
                                     Home
                                 </Link>
                             </li>
                             <li>
                                 <Link href="#">
-                                    <i className="fa-solid fa-people-group"></i>
+                                    <FontAwesomeIcon icon={faPeopleGroup} />
                                     Team
                                 </Link>
                                 <div className="dropdown">
                                     <p>
                                         <Link href="/team/mritunjoy-mushahary">
-                                            <i className="fa-solid fa-caret-right"></i>
+                                            <FontAwesomeIcon icon={faCaretRight} />
                                             Mritunjoy Mushahary
                                         </Link>
                                     </p>
@@ -123,31 +126,31 @@ const Header = () => {
 
                             <li>
                                 <Link href="#">
-                                    <i className="fa-solid fa-newspaper"></i>
+                                    <FontAwesomeIcon icon={faBox} />
                                     Services & Products
                                 </Link>
                                 <div className="dropdown">
                                     <p>
                                         <Link href="/photos/v2/photos">
-                                            <i className="fa-solid fa-caret-right"></i>
+                                            <FontAwesomeIcon icon={faCaretRight} />
                                             Photos
                                         </Link>
                                     </p>
                                     <p>
                                         <Link href="https://www.youtube.com/channel/UCAtGNXWv745_aJ1d6hUzIDw">
-                                            <i className="fa-solid fa-caret-right"></i>
+                                            <FontAwesomeIcon icon={faCaretRight} />
                                             Youtube Golang
                                         </Link>
                                     </p>
                                     <p>
                                         <Link href="https://www.youtube.com/channel/UC4yIAbSHhvVBHKd6z_Zf8-g">
-                                            <i className="fa-solid fa-caret-right"></i>
+                                            <FontAwesomeIcon icon={faCaretRight} />
                                             Youtube Vlog
                                         </Link>
                                     </p>
                                     <p>
                                         <Link href="/articles/v2">
-                                            <i className="fa-solid fa-caret-right"></i>
+                                            <FontAwesomeIcon icon={faCaretRight} />
                                             Articles
                                         </Link>
                                     </p>
@@ -155,25 +158,25 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link href="#">
-                                    <i className="fa-solid fa-circle-chevron-down"></i>
+                                    <FontAwesomeIcon icon={faCircleDot} />
                                     Others
                                 </Link>
                                 <div className="dropdown">
                                     <p>
                                         <Link href="/contact">
-                                            <i className="fa-solid fa-caret-right"></i>
+                                            <FontAwesomeIcon icon={faCaretRight} />
                                             Contact us
                                         </Link>
                                     </p>
                                     <p>
                                         <Link href="/terms">
-                                            <i className="fa-solid fa-caret-right"></i>
+                                            <FontAwesomeIcon icon={faCaretRight} />
                                             Terms&Conditions
                                         </Link>
                                     </p>
                                     <p>
                                         <Link href="/about">
-                                            <i className="fa-solid fa-caret-right"></i>
+                                            <FontAwesomeIcon icon={faCaretRight} />
                                             About us
                                         </Link>
                                     </p>

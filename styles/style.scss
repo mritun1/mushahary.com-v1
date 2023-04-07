@@ -95,7 +95,7 @@ a {
                     text-decoration: underline;
                 }
 
-                i {
+                &>svg {
                     margin-right: 5px;
                 }
             }
@@ -118,6 +118,9 @@ a {
                     padding-top:6px;
                     padding-bottom:6px;
                     a {
+                        &>svg{
+                            margin-right: 6px;
+                        }
                         font-weight: 500;
                     }
                 }
@@ -1159,6 +1162,9 @@ margin-left: 3px;
                     @include mobileRightMenuLink();
                     &>a>li{
                         //margin-bottom:20px;
+                        &>svg{
+                            margin-right: 6px;
+                        }
                         margin-top: 6px;
                     }
                     
