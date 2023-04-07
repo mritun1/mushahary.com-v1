@@ -6,6 +6,7 @@ const PhotosSearch = (props:any) => {
     const [searchTxt, setSearchTxt] = useState("")
     
     function handleSearchTxt(event:any){
+        console.log(event.target.value)
         setSearchTxt(event.target.value)
     }
     useEffect(()=>{
