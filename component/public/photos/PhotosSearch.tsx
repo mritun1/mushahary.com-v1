@@ -13,7 +13,7 @@ const PhotosSearch = (props:any) => {
         setSearchTxt(props.myProp)
     },[])
     const searchForm = () => {
-        alert(searchTxt)
+        console.log("Search Btn CLicked")
         window.location.href = "/photos/v2/search/"+searchTxt
     }
     return (
@@ -27,7 +27,8 @@ const PhotosSearch = (props:any) => {
                     </div>
                     <div>
                         <div onClick={searchForm}>
-                            <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            {/* <i className="fa-sharp fa-solid fa-magnifying-glass"></i> */}
+                            Search
                         </div>
                     </div>
                 </div>
