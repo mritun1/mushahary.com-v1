@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Footer from '../../component/common/Footer'
 import Header from '../../component/common/Header'
 import { useState } from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
+import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
 export default function Home(props: { allBlogs: []; }) {
 
@@ -93,11 +95,11 @@ export default function Home(props: { allBlogs: []; }) {
                                         <tr>
                                             <td>HTML5/CSS3:</td>
                                             <td className='stars'>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star"></i>
-                                                <i className="fa-solid fa-star-half-stroke"></i>
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStar} />
+                                                <FontAwesomeIcon icon={faStarHalfStroke} />
                                             </td>
                                             <td>6 yrs exp.</td>
                                         </tr>
