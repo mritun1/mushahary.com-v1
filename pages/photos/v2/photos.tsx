@@ -81,7 +81,7 @@ export default function Photos() {
 
                     <InfiniteScroll
                         dataLength={totalPhotos} //This is important field to render the next data
-                        next={() => getArticleLists(totalPhotos, limit)}
+                        next={()=>articlePag}
                         hasMore={true}
                         loader={<h4>Loading...</h4>}
                         endMessage={
