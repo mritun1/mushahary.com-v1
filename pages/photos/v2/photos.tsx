@@ -145,6 +145,10 @@ export default function Photos() {
                         </div>
                     </InfiniteScroll>
 
+                    <div className="adminArticleListPag">
+                        {pagBtns}
+                    </div>
+
                     
 
                     {photosList ? (<div className="loading">
