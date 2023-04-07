@@ -14,6 +14,8 @@ export default function Photos() {
     const [photosList, setPhotosList] = useState([])
     
     var limit = 6
+    var offset = 0
+    let [pageNum, setPageNum] = useState(1);
 
     //var [totalPhotos, setTotalPhotos] = useState(0)
     const fetchMorePhotos = async () => {
@@ -31,8 +33,7 @@ export default function Photos() {
         }
     };
 
-    var offset = 0
-    let [pageNum, setPageNum] = useState(1);
+    
     useEffect(() => {
         const fetchPhotos = async () => {
             try {
