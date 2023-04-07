@@ -131,6 +131,13 @@ export default function Photos() {
                         </div>
                     </div>
 
+                    {photosList ? (<div className="loading">
+                        <img
+                            src="/imgs/common/loading.gif"
+                        />
+                    </div>):(``)}
+                    
+
                 </div>
 
                 <Footer />

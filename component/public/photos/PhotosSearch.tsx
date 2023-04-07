@@ -15,20 +15,22 @@ const PhotosSearch = (props:any) => {
         window.location.href = "/photos/v2/search/"+searchTxt
     }
     return (
-        <div>
-            <div className="photos_search">
-                <div>
+        <>
+            <div>
+                <div className="photos_search">
                     <div>
-                        <input type="text" name="searchTxt" value={searchTxt} onChange={handleSearchTxt} id="" placeholder='Search Photos...' />
+                        <div>
+                            <input type="text" name="searchTxt" value={searchTxt} onChange={handleSearchTxt} id="" placeholder='Search Photos...' />
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div onClick={searchForm}>
-                        <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    <div>
+                        <div onClick={searchForm}>
+                            <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

@@ -246,7 +246,7 @@ export default function Home(props: { allBlogs: []; }) {
                                             <td>6 months exp.</td>
                                         </tr>
 
-                                        <tr>
+                                        {/* <tr>
                                             <td>Libraries &amp; Packages:</td>
                                             <td colSpan={2}>
 
@@ -287,8 +287,8 @@ export default function Home(props: { allBlogs: []; }) {
                                                 </span>
 
                                             </td>
-                                        </tr>
-                                        <tr>
+                                        </tr> */}
+                                        {/* <tr>
                                             <td>Tools &amp; Servers:</td>
                                             <td colSpan={2}>
                                                 <span className='tags'>SCSS/SASS</span>
@@ -305,9 +305,105 @@ export default function Home(props: { allBlogs: []; }) {
                                                 <span className='tags'>Docker</span>
                                                 <span className='tags'>Jenkins (CI/CD)</span>
                                             </td>
-                                        </tr>
+                                        </tr> */}
                                     </tbody>
                                 </table>
+                            </div>
+                            <div className="resume_heading">
+                                <h3>Libraries & Packages:</h3>
+                            </div>
+                            <div >
+                                <button className='lib'>
+                                    <span>CSS</span>
+                                    <span>Bootstrap</span>
+                                </button>
+
+                                <button className='lib'>
+                                    <span>CSS</span>
+                                    <span>TailwindCSS</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Go</span>
+                                    <span>Fiber Framework</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Go</span>
+                                    <span>AWS SDK</span>
+                                </button>
+
+                                <button className='lib'>
+                                    <span>PHP</span>
+                                    <span>PHPmailer</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Next.js/Go/PHP</span>
+                                    <span>.env</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Go</span>
+                                    <span>GORM/CRUD operations</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Go</span>
+                                    <span>JWT/Middleware/API</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Go</span>
+                                    <span>Gomail</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Database</span>
+                                    <span>MySQL</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>JavaScript/React.js</span>
+                                    <span>Next.js Framework</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Next.js</span>
+                                    <span>Typescript (.tsx)</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Next.js</span>
+                                    <span>Axios</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Next.js</span>
+                                    <span>Draft.js</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Next.js</span>
+                                    <span>Nprogress (nextjs-progressbar)</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>CSS3/Next.js</span>
+                                    <span>SCSS/SASS</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Cornjob</span>
+                                    <span>Corntab</span>
+                                </button>
+                                <button className='lib'>
+                                    <span>Others</span>
+                                    <span>CMS/MVC</span>
+                                </button>
+                            </div>
+                            <div className="resume_heading">
+                                <h3>Dev Ops</h3>
+                            </div>
+                            <div>
+                                <button className='tags'>FTP/Putty/SSH</button>
+                                <button className='tags'>XAMPP/Apache2</button>
+                                <button className='tags'>Figma.com</button>
+                                <button className='tags'>AWS EC2/s3</button>
+                                <button className='tags'>Vercel</button>
+                                <button className='tags'>Godaddy</button>
+                                <button className='tags'>Git/Github</button>
+                                <button className='tags'>Linux</button>
+                                <button className='tags'>Shell Scripting</button>
+                                <button className='tags'>Nginx</button>
+                                <button className='tags'>Docker</button>
+                                <button className='tags'>Jenkins (CI/CD)</button>
                             </div>
                             <div className="resume_heading">
                                 <h3>PROJECTs</h3>
@@ -528,24 +624,24 @@ export default function Home(props: { allBlogs: []; }) {
                             <div className="resume_tools">
                                 <p>Tools that helps me for Development.</p>
                                 <div className='resume_tools_link'>
-                                    <Link href="https://www.figma.com/" target="_blank">Figma.com</Link>
-                                    <Link href="https://www.google.com/docs/about/" target={"_blank"}>Google Docs</Link>
-                                    <Link href="https://www.google.com/sheets/about/" target={"_blank"}>Google Sheets</Link>
-                                    <Link href="https://www.google.com/slides/about/" target={"_blank"}>Google Presentation</Link>
-                                    <Link href="https://meet.google.com/" target={"_blank"}>Google Meet</Link>
-                                    <Link href="https://css-tricks.com/the-shapes-of-css/" target={"_blank"}>CSS Tricks</Link>
-                                    <Link href="https://www.gloomaps.com/" target={"_blank"}>Site-maping Tool</Link>
-                                    <Link href="https://imgbox.com/" target={"_blank"}>Upload & Share Image Tool</Link>
-                                    <Link href="https://jsfiddle.net/" target={"_blank"}>Sharing codes Tool</Link>
-                                    <Link href="https://sharetext.me/" target={"_blank"}>Sharing Text Tool</Link>
-                                    <Link href="https://quillbot.com/grammar-check" target={"_blank"}>Grammar Check</Link>
-                                    <Link href="https://jsonlint.com/" target={"_blank"}>JSON Validator</Link>
-                                    <Link href="https://fontawesome.com/icons" target={"_blank"}>Font-awesome Icons</Link>
-                                    <Link href="https://www.flaticon.com/" target={"_blank"}>Flat Icons</Link>
-                                    <Link href="https://www.remove.bg/" target={"_blank"}>Background Image Remover</Link>
-                                    <Link href="https://www.rebasedata.com/convert-sql-to-csv-online" target={"_blank"}>.SQL to .CSV Converter</Link>
-                                    <Link href="https://www.tutorialspoint.com/whiteboard.htm" target={"_blank"}>White board</Link>
-                                    <Link href="https://jwt.io/" target={"_blank"}>JWT Token Validator</Link>
+                                    <Link href="https://www.figma.com/" target="_blank"><button>Figma.com</button></Link>
+                                    <Link href="https://www.google.com/docs/about/" target={"_blank"}><button>Google Docs</button></Link>
+                                    <Link href="https://www.google.com/sheets/about/" target={"_blank"}><button>Google Sheets</button></Link>
+                                    <Link href="https://www.google.com/slides/about/" target={"_blank"}><button>Google Presentation</button></Link>
+                                    <Link href="https://meet.google.com/" target={"_blank"}><button>Google Meet</button></Link>
+                                    <Link href="https://css-tricks.com/the-shapes-of-css/" target={"_blank"}><button>CSS Tricks</button></Link>
+                                    <Link href="https://www.gloomaps.com/" target={"_blank"}><button>Site-maping Tool</button></Link>
+                                    <Link href="https://imgbox.com/" target={"_blank"}><button>Upload & Share Image Tool</button></Link>
+                                    <Link href="https://jsfiddle.net/" target={"_blank"}><button>Sharing codes Tool</button></Link>
+                                    <Link href="https://sharetext.me/" target={"_blank"}><button>Sharing Text Tool</button></Link>
+                                    <Link href="https://quillbot.com/grammar-check" target={"_blank"}><button>Grammar Check</button></Link>
+                                    <Link href="https://jsonlint.com/" target={"_blank"}><button>JSON Validator</button></Link>
+                                    <Link href="https://fontawesome.com/icons" target={"_blank"}><button>Font-awesome Icons</button></Link>
+                                    <Link href="https://www.flaticon.com/" target={"_blank"}><button>Flat Icons</button></Link>
+                                    <Link href="https://www.remove.bg/" target={"_blank"}><button>Background Image Remover</button></Link>
+                                    <Link href="https://www.rebasedata.com/convert-sql-to-csv-online" target={"_blank"}><button>.SQL to .CSV Converter</button></Link>
+                                    <Link href="https://www.tutorialspoint.com/whiteboard.htm" target={"_blank"}><button>White board</button></Link>
+                                    <Link href="https://jwt.io/" target={"_blank"}><button>JWT Token Validator</button></Link>
                                 </div>
                             </div>
 
