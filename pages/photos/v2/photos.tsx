@@ -16,6 +16,7 @@ export default function Photos() {
     var limit = 9
     let [pageNum, setPageNum] = useState(1);
     let [offset, setOffset] = useState(0);
+    let [photoTotal,setPhotoTotal] = useState(0);
 
     const fetchMorePhotos = async () => {
         if (pageNum > 1) {
@@ -42,7 +43,7 @@ export default function Photos() {
                 setPhotosList(res.data.data);
                 const totalPages = Math.ceil(res.data.total / limit);
                 setPageNum(totalPages);
-                //setOffset(res.data.total)
+                setPhotoTotal(res.data.total)
                 //console.log(res.data.data)
             } catch (error) {
                 console.log(error);
@@ -53,9 +54,9 @@ export default function Photos() {
     
 
     // var gal1 = 1
-    var gal1 = 51
-    var gal2 = 2
-    var gal3 = 3
+    var gal1 = photoTotal
+    var gal2 = photoTotal - 1
+    var gal3 = photoTotal - 2
 
     return (
         <div >
