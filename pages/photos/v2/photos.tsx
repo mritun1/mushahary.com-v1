@@ -37,7 +37,7 @@ export default function Photos() {
     useEffect(() => {
         const fetchPhotos = async () => {
             try {
-                const res = await API_URL.get(`/api/v1/photos/getAll/${offset}/${limit}`);
+                const res = await API_URL.get(`/api/v1/photos/getAll/${offset}/${limit}?sort=-id`);
                 setPhotosList(res.data.data);
                 const totalPages = Math.ceil(res.data.total / limit);
                 setPageNum(totalPages);
