@@ -97,7 +97,7 @@ export default function Photos() {
                     <InfiniteScroll
                         dataLength={photosList.length}
                         next={fetchMorePhotos}
-                        hasMore={pageNum > 1}
+                        hasMore={true}
                         loader={<h4>Loading...</h4>}
                         endMessage={
                             <p style={{ textAlign: 'center' }}>
