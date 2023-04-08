@@ -98,10 +98,14 @@ export default function Photos() {
                         dataLength={photosList.length}
                         next={fetchMorePhotos}
                         hasMore={pageNum > 1}
-                        loader={<h4>Loading...</h4>}
+                        loader={<div className="loading">
+                            <img
+                                src="/imgs/common/loading.gif"
+                            />
+                        </div>}
                         endMessage={
                             <p style={{ textAlign: 'center' }}>
-                                <b>Yay! You have seen it all</b>
+                                <b>No more content Found.</b>
                             </p>
                         }
                     >
@@ -162,11 +166,7 @@ export default function Photos() {
                     </InfiniteScroll>
                     
 
-                    {photosList ? (<div className="loading">
-                        <img
-                            src="/imgs/common/loading.gif"
-                        />
-                    </div>):(``)}
+                   
                     
 
                 </div>
