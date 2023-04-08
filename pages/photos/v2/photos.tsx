@@ -27,7 +27,7 @@ export default function Photos() {
             try {
                 const res = await API_URL.get(`/api/v1/photos/getAll/${newOffset}/${limit}`);
                 setPhotosList([...photosList, ...res.data.data] as never[]);
-                //setPageNum(nextPageNum);
+                setPageNum(nextPageNum);
                 setOffset(newOffset)
             } catch (error) {
                 console.log(error);
