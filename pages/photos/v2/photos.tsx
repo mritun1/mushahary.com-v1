@@ -11,7 +11,7 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 
 export default function Photos() {
 
-    const [photosList, setPhotosList] = useState([])
+    const [photosList, setPhotosList] = useState<never[]>([])
     
     var limit = 6
     var offset = 0
@@ -24,8 +24,8 @@ export default function Photos() {
             const newOffset = nextPageNum * limit;
             try {
                 const res = await API_URL.get(`/api/v1/photos/getAll/${newOffset}/${limit}`);
-                //setPhotosList([...photosList, ...res.data.data]);
-                setPhotosList(res.data.data)
+                setPhotosList([...photosList, ...res.data.data] as never[]);
+                //setPhotosList(res.data.data)
                 setPageNum(nextPageNum);
             } catch (error) {
                 console.log(error);
@@ -97,7 +97,7 @@ export default function Photos() {
                     <InfiniteScroll
                         dataLength={photosList.length}
                         next={fetchMorePhotos}
-                        hasMore={true}
+                        hasMore={pageNum > 1}
                         loader={<h4>Loading...</h4>}
                         endMessage={
                             <p style={{ textAlign: 'center' }}>
