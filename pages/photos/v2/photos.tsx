@@ -43,7 +43,7 @@ export default function Photos() {
                 const totalPages = Math.ceil(res.data.total / limit);
                 setPageNum(totalPages);
                 //setOffset(res.data.total)
-                console.log(res.data.data)
+                //console.log(res.data.data)
             } catch (error) {
                 console.log(error);
             }
@@ -52,7 +52,8 @@ export default function Photos() {
     }, []);
     
 
-    var gal1 = 1
+    // var gal1 = 1
+    var gal1 = 51
     var gal2 = 2
     var gal3 = 3
 
