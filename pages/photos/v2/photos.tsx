@@ -13,15 +13,13 @@ export default function Photos() {
 
     const [photosList, setPhotosList] = useState<never[]>([])
     
-    var limit = 6
-    //var offset = 0
+    var limit = 9
     let [pageNum, setPageNum] = useState(1);
     let [offset, setOffset] = useState(0);
 
     const fetchMorePhotos = async () => {
         if (pageNum > 1) {
             const nextPageNum = pageNum - 1;
-            //const newOffset = nextPageNum * limit;
             const newOffset = offset + limit 
             console.log(newOffset)
             try {
@@ -49,26 +47,6 @@ export default function Photos() {
         };
         fetchPhotos();
     }, []);
-
-    //var offset = 0
-    // var totalPhotos = 0;
-    // const getArticleLists = async (o: any, l: any) => {
-    //     try {
-    //         const res = await API_URL.get("/api/v1/photos/getAll/" + o + "/" + l)
-    //         setPhotosList(res.data.data)
-    //         const pagNumNew = parseInt(res.data.total) / limit
-            
-    //         totalPhotos = res.data.total
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
-
-
-    // useEffect(() => {
-    //     getArticleLists(offset, limit)
-        
-    // }, [])
 
     var gal1 = 1
     var gal2 = 2
@@ -125,7 +103,6 @@ export default function Photos() {
                                                 <img
                                                     src={PHOTO_URL} />
                                             </Link>
-                                            {/* <iframe src="https://drive.google.com/file/d/1Nynv4xQc4lOopI6aJnuzyhbogI3S5N7w/preview" width="100%" height="480" allow="autoplay"></iframe> */}
                                         </>)
 
                                     }
