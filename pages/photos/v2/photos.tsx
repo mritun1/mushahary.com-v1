@@ -14,12 +14,13 @@ export default function Photos() {
     const [photosList, setPhotosList] = useState<never[]>([])
     
     var limit = 6
-    var offset = 0
+    //var offset = 0
     let [pageNum, setPageNum] = useState(1);
+    let [offset, setOffset] = useState(0);
 
     const fetchMorePhotos = async () => {
         if (pageNum > 1) {
-            //const nextPageNum = pageNum - 1;
+            const nextPageNum = pageNum - 1;
             //const newOffset = nextPageNum * limit;
             const newOffset = offset + limit + 1
             console.log(newOffset)
@@ -27,7 +28,7 @@ export default function Photos() {
                 const res = await API_URL.get(`/api/v1/photos/getAll/${newOffset}/${limit}`);
                 setPhotosList([...photosList, ...res.data.data] as never[]);
                 //setPageNum(nextPageNum);
-                offset = newOffset
+                setOffset(newOffset)
             } catch (error) {
                 console.log(error);
             }
@@ -41,7 +42,7 @@ export default function Photos() {
                 const res = await API_URL.get(`/api/v1/photos/getAll/${offset}/${limit}`);
                 setPhotosList(res.data.data);
                 const totalPages = Math.ceil(res.data.total / limit);
-                //setPageNum(totalPages);
+                setPageNum(totalPages);
             } catch (error) {
                 console.log(error);
             }
