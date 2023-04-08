@@ -22,7 +22,7 @@ export default function Photos() {
         if (pageNum > 1) {
             const nextPageNum = pageNum - 1;
             //const newOffset = nextPageNum * limit;
-            const newOffset = offset + limit + 1
+            const newOffset = offset + limit 
             console.log(newOffset)
             try {
                 const res = await API_URL.get(`/api/v1/photos/getAll/${newOffset}/${limit}`);
