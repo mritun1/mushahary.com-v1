@@ -20,8 +20,8 @@ export default function Photos() {
     const fetchMorePhotos = async () => {
         if (pageNum > 1) {
             const nextPageNum = pageNum - 1;
-            //const newOffset = offset + limit
-            const newOffset = offset - limit 
+            const newOffset = offset + limit
+            //const newOffset = offset - limit 
             console.log(newOffset)
             try {
                 const res = await API_URL.get(`/api/v1/photos/getAll/${newOffset}/${limit}`);
@@ -42,8 +42,8 @@ export default function Photos() {
                 setPhotosList(res.data.data);
                 const totalPages = Math.ceil(res.data.total / limit);
                 setPageNum(totalPages);
-                setOffset(res.data.total)
-                console.log(res.data.total)
+                //setOffset(res.data.total)
+                console.log(res.data.data)
             } catch (error) {
                 console.log(error);
             }
